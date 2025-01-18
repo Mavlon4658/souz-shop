@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./HelveticaRegular.eot'); /* IE9 uchun */
+    src: url('./HelveticaRegular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 uchun */
+         url('./HelveticaRegular.woff') format('woff'), /* WOFF */
+         url('./HelveticaRegular.ttf') format('truetype'); /* TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./HelveticaBold.eot');
+    src: url('./HelveticaBold.eot?#iefix') format('embedded-opentype'),
+         url('./HelveticaBold.woff') format('woff'),
+         url('./HelveticaBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./HelveticaLight.eot');
+    src: url('./HelveticaLight.eot?#iefix') format('embedded-opentype'),
+         url('./HelveticaLight.woff') format('woff'),
+         url('./HelveticaLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}

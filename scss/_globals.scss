@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+// Fonts
+$font-tt-norms: 'TT Norms', sans-serif;
+$font-inter: "Inter", serif;
+$font-manrope: "Manrope", serif;
+$font-helvetica: "Helvetica", sans-serif;
+// Fonts end
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
