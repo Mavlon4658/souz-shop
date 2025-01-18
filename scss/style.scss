@@ -103,3 +103,348 @@ textarea {
     }
 }
 // Header end
+
+// footer
+.footer {
+    background: #465464;
+    padding: 60px 0;
+
+    @include media(993) {
+        padding: 30px 0 15px 0;
+    }
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+
+        @include media(993) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    h6 {
+        font-family: $font-tt-norms;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23.6px;
+        color: #FFFFFF;
+
+        @include media(993) {
+            color: rgba(255, 255, 255, .40);
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px 146px;
+
+        @include media(1200) {
+            gap: 36px 50px;
+            justify-content: space-between;
+        }
+
+        @include media(993) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &_logo {
+        width: 345px;
+        margin-top: 105px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px;
+
+        @include media(993) {
+            gap: 2px;
+            width: 150px;
+            margin-top: 0;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 345px;
+
+            @include media(993) {
+                width: 150px;
+            }
+        }
+
+        span {
+            font-family: $font-tt-norms;
+            font-size: 27px;
+            font-weight: 500;
+            line-height: 32.4px;
+            color: rgba(255, 255, 255, .40);
+            text-transform: uppercase;
+
+            @include media(993) {
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+
+    &_contact {
+        @include media(993) {
+            margin-top: 30px;
+        }
+    }
+
+    &_contact_in {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 22px 15px;
+
+        @include media(993) {
+            gap: 10px;
+            margin-top: 15px;
+        }
+    }
+
+    &_contact_block {
+        display: flex;
+        align-items: start;
+        gap: 15px;
+        font-family: $font-tt-norms;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 15.4px;
+        color: #FFFFFF;
+
+        @include media(993) {
+            font-size: 9px;
+            line-height: 9.5px;
+            gap: 5px;
+        }
+
+        svg {
+            flex-shrink: 0;
+
+            @include media(993) {
+                width: 10px;
+                height: 10px;
+                opacity: .4;
+            }
+        }
+    }
+
+    form {
+        margin-top: 15px;
+        border: 1px solid #FFFFFF;
+        border-radius: 15px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+
+        @include media(993) {
+            padding: 13px 15px;
+        }
+
+        input {
+            width: 100%;
+            font-family: $font-tt-norms;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 15.4px;
+            color: #FFFFFF;
+
+            @include media(993) {
+                font-size: 8px;line-height: 8px;
+            }
+
+            &::placeholder {
+                color: #FFFFFF;
+            }
+        }
+
+        button {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                @include media(993) {
+                    width: 12px;
+                    height: 6px;
+                }
+            }
+        }
+    }
+
+    &_links {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &_link {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 15px;
+
+            @include media(993) {
+                gap: 10px;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        a {
+            font-family: $font-tt-norms;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 15.4px;
+            color: #FFFFFF;
+
+            @include media(993) {
+                font-size: 9px;
+                line-height: 9px;
+            }
+        }
+    }
+
+    &_social {
+        margin: 71px 0 58px 0;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include media(993) {
+            margin: 23px 0 38px 0;
+            gap: 15px;
+        }
+
+        a {
+            svg {
+                path {
+                    transition: .2s ease;
+                }
+            }
+        }
+
+        .whatsapp {
+
+            svg {
+                @include media(993) {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: #2CB472;
+                    }
+                }
+            }
+        }
+
+        .telegram {
+
+            svg {
+                @include media(993) {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: #0088CC;
+                    }
+                }
+            }
+        }
+
+        .mail {
+
+            svg {
+                @include media(993) {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: #465464;
+                    }
+                }
+            }
+        }
+    }
+
+    &_bottom {
+        position: relative;
+        display: grid;
+        align-items: end;
+        grid-template-columns: repeat(2, 1fr);
+        padding-right: 35px;
+
+        @include media(993) {
+            padding-right: 0;
+        }
+
+        span,
+        li {
+            font-family: $font-tt-norms;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14.4px;
+            color: #FFFFFF;
+
+            @include media(993) {
+                font-size: 8px;
+                line-height: 8.8px;
+                opacity: .4;
+            }
+        }
+    }
+
+    &_up {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #FFFFFF;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media(993) {
+            width: 24px;
+            height: 24px;
+            left: 0;
+            right: auto;
+            bottom: 27px;
+        }
+
+        svg {
+            @include media(993) {
+                width: 6px;
+                height: 10px;
+            }
+        }
+    }
+
+}
+// footer
