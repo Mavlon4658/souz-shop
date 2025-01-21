@@ -482,15 +482,78 @@ textarea {
         row-gap: 30px;
         flex-wrap: wrap;
         align-items: stretch;
+        position: relative;
+        z-index: 1;
 
         .main-img {
             height: 260px;
             width: 100%;
             border-radius: 5px;
             object-fit: cover;
+            margin-bottom: 10px;
         }
 
-        div {
+        h4 {
+            font-size: 16px;
+            line-height: 120%;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 110%;
+            color: #6B7683;
+            font-weight: 500;
+            margin-bottom: 7px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .hover-text {
+            position: absolute;
+            top: 220px;
+            left: 0;
+            width: 100%;
+        }
+
+        h5 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #6B7683;
+            margin-bottom: 1px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            line-height: 110%;
+            color: #6B7683;
+            font-weight: 500;
+        }
+        
+        li {
+            position: relative;
+            z-index: 1;
+
+            .hover-text {
+                display: none;
+            }
+
+            &:hover {
+                .main-img, h4, p, h3 {
+                    opacity: 0;
+                }
+        
+                .hover-text {
+                    display: block;
+                }
+            }
+
             &:nth-child(1),
             &:nth-child(7) {
                 width: 210px;
@@ -520,6 +583,26 @@ textarea {
 }
 
 // Example end
+
+// Brand
+.brand {
+    padding-bottom: 62px;
+
+    &__title {
+        margin-bottom: 55px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img:not(:hover) {
+            filter: brightness(0) invert(0.4);
+        }
+    }
+}
+// Brand end
 
 // footer
 .footer {
