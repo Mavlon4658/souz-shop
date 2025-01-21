@@ -36,3 +36,13 @@ window.addEventListener('scroll', function (e) {
     
     scrY1 = scrY2
 })
+
+const header = document.querySelector('.header');
+const bars = document.querySelector('.bars');
+const mobileMenu = document.querySelector('.header .mobile-menu');
+
+bars.onclick = () => {
+    mobileMenu.classList.toggle('active');
+    bars.classList.toggle('active');
+    header.classList.toggle('active');
+}
