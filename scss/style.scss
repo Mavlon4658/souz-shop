@@ -96,8 +96,17 @@ textarea {
 
 // Header
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    background: #FFF;
+
     &__top {
         background: #EBF6FB;
+        position: relative;
+        z-index: 2;
 
         .container {
             display: flex;
@@ -163,6 +172,17 @@ textarea {
     }
 
     &__bottom {
+        transition: .3s ease all;
+        position: relative;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: #FFF;
+
+        &.hide {
+            transform: translateY(-100%);
+        }
 
         .container {
             display: flex;

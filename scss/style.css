@@ -152,8 +152,18 @@ textarea {
   }
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  background: #FFF;
+}
 .header__top {
   background: #EBF6FB;
+  position: relative;
+  z-index: 2;
 }
 .header__top .container {
   display: flex;
@@ -205,6 +215,18 @@ textarea {
   font-size: 16px;
   line-height: 120%;
   color: #656565;
+}
+.header__bottom {
+  transition: 0.3s ease all;
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: #FFF;
+}
+.header__bottom.hide {
+  transform: translateY(-100%);
 }
 .header__bottom .container {
   display: flex;

@@ -18,3 +18,21 @@ if (headerSearchInp) {
         }
     }
 }
+
+const headBottom = document.querySelector('.header__bottom');
+let scrY1 = window.scrollY;
+let scrY2 = window.scrollY;
+
+window.addEventListener('scroll', function (e) {
+    scrY2 = this.window.scrollY;
+
+    if (scrY2/10 < scrY1/10) {
+        headBottom.classList.remove('hide');
+    } else {
+        if (this.window.scrollY > 150) {
+            headBottom.classList.add('hide');
+        }
+    }
+    
+    scrY1 = scrY2
+})
