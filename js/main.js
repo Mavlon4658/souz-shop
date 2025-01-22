@@ -8,6 +8,9 @@ const bodyVisible = () => {
 
 const headerSearchInp = document.querySelector('.header__search_inp input');
 const headerList = document.querySelector('.header__search_list');
+const headerSearchBtn = document.querySelectorAll('.header__search_inp button')[0];
+const headerClrBtn = document.querySelector('.header__search_inp .clear');
+const headerBottomLeft = document.querySelector('.header__bottom_left');
 
 if (headerSearchInp) {
     headerSearchInp.oninput = e => {
@@ -16,6 +19,16 @@ if (headerSearchInp) {
         } else {
             headerList.classList.remove('active');
         }
+    }
+
+    headerClrBtn.onclick = () => {
+        headerList.classList.remove('active');
+        headerSearchInp.value = ''
+        headerBottomLeft.classList.remove('active');
+    }
+
+    headerSearchBtn.onclick = () => {
+        headerBottomLeft.classList.add('active');
     }
 }
 
@@ -31,6 +44,10 @@ window.addEventListener('scroll', function (e) {
     } else {
         if (this.window.scrollY > 150) {
             headBottom.classList.add('hide');
+
+            if (headerList) {
+                headerList.classList.remove('active');
+            }
         }
     }
     

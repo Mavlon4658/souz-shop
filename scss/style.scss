@@ -302,6 +302,46 @@ textarea {
                 display: flex;
                 align-items: center;
                 gap: 5px;
+
+                &.active {
+                    .header {
+                        &__filter-btn {
+                            display: none;
+                        }
+
+                        &__search {
+                            
+                            &_inp {
+                                input {
+                                    width: 150px;
+                                    display: block;
+                                    height: 30px;
+                                    border-color: rgba(107, 118, 131, 0.3);
+                                    padding: 0 8px;
+                                    font-size: 12px;
+                                }
+
+                                button {
+                                    position: absolute;
+                                    border: 0;
+                                    width: 16px;
+                                    height: 16px;
+                                    top: 50%;
+                                    right: 7px;
+                                    left: auto;
+                                    transform: translateY(-50%);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    &:nth-child(2) {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -375,6 +415,10 @@ textarea {
                 align-items: center;
                 justify-content: center;
 
+                &:last-child {
+                    display: none;
+                }
+
                 @include media(992) {
                     width: 30px;
                     height: 30px;
@@ -406,6 +450,12 @@ textarea {
             padding: 20px;
             display: none;
 
+            @include media(992) {
+                padding: 12px 10px;
+                // display: block;
+                width: 209px;
+            }
+
             &.active {
                 display: block;
             }
@@ -421,6 +471,10 @@ textarea {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+
+                @include media(992) {
+                    gap: 5px;
+                }
             }
 
             li {
@@ -431,6 +485,10 @@ textarea {
                 font-size: 16px;
                 line-height: 120%;
                 width: 100%;
+
+                @include media(992) {
+                    font-size: 12px;
+                }
             }
         }
     }
