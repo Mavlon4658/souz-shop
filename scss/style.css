@@ -168,6 +168,48 @@ textarea {
   background: #A2D8EB;
 }
 
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.breadcrumbs a,
+.breadcrumbs span,
+.breadcrumbs li {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.6px;
+}
+@media screen and (max-width: 993px) {
+  .breadcrumbs a,
+  .breadcrumbs span,
+  .breadcrumbs li {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.breadcrumbs a {
+  color: #6C6C6C;
+}
+.breadcrumbs span,
+.breadcrumbs li {
+  color: #A2A2A2;
+}
+
+.main_title {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 60px;
+  letter-spacing: -0.04em;
+  color: #6B7683;
+}
+@media screen and (max-width: 993px) {
+  .main_title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
 .container {
   max-width: 1310px;
   margin: 0 auto;
@@ -1155,6 +1197,72 @@ textarea {
   .brand ul li {
     width: calc(50% - 10px);
     text-align: center;
+  }
+}
+
+.return_exchange {
+  padding-top: 200px;
+}
+.return_exchange .main_title {
+  margin-top: 60px;
+}
+@media screen and (max-width: 993px) {
+  .return_exchange .main_title {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .return_exchange {
+    padding-top: 135px;
+  }
+}
+.return_exchange_in {
+  padding: 30px 0 60px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 190px;
+  align-items: start;
+}
+@media screen and (max-width: 993px) {
+  .return_exchange_in {
+    gap: 30px;
+    padding: 20px 0 60px 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.return_exchange_block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.return_exchange h6 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.6px;
+  color: #6B7683;
+  padding: 3px 10px;
+  border: 2px solid #01ABD3;
+  border-radius: 10px;
+  width: -moz-max-content;
+  width: max-content;
+}
+@media screen and (max-width: 993px) {
+  .return_exchange h6 {
+    padding: 8px 18px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.return_exchange p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #656565;
+}
+@media screen and (max-width: 993px) {
+  .return_exchange p {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 
