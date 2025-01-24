@@ -63,3 +63,42 @@ bars.onclick = () => {
     bars.classList.toggle('active');
     header.classList.toggle('active');
 }
+
+const likeBtn = document.querySelectorAll('.like');
+
+if (likeBtn.length) {
+    likeBtn.forEach(btn => {
+        btn.onclick = () => {
+            btn.classList.toggle('active');
+        }
+    })
+}
+
+const calculate = document.querySelectorAll('.calculate');
+
+if (calculate.length) {
+    calculate.forEach(el => {
+        const minus = el.querySelector('.minus');
+        const plus = el.querySelector('.plus');
+        const text = el.querySelector('p');
+
+        plus.onclick = () => {
+            text.textContent = parseInt(text.textContent) + 1 + ' п.м.';
+        }
+
+        minus.onclick = () => {
+            if (parseInt(text.textContent) != 1)
+            text.textContent = parseInt(text.textContent) - 1 + ' п.м.';
+        }
+    })
+}
+
+const anonsSwp = new Swiper('.anons__swp .swiper', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+        nextEl: '.anons__swp_next',
+        prevEl: '.anons__swp_prev',
+    }
+})
