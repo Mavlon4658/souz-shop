@@ -2336,6 +2336,35 @@ textarea {
     padding-top: 135px;
   }
 }
+.search_results .search_input {
+  margin-top: 40px;
+  width: 360px;
+  border-radius: 10px;
+  border: 1px solid #D9D9D9;
+  height: 35px;
+  display: flex;
+}
+@media screen and (max-width: 993px) {
+  .search_results .search_input {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+.search_results .search_input input {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+.search_results .search_input button {
+  background: #D9D9D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 9px;
+}
 .search_results_text {
   position: relative;
 }

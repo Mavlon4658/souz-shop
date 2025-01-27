@@ -2477,6 +2477,37 @@ textarea {
         padding-top: 135px;
     }
 
+    .search_input {
+        margin-top: 40px;
+        width: 360px;
+        border-radius: 10px;
+        border: 1px solid #D9D9D9;
+        height: 35px;
+        display: flex;
+
+        @include media(993) {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        input {
+            padding: 10px;
+            height: 100%;
+            width: 100%;
+        }
+
+        button {
+            background: #D9D9D9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 43px;
+            height: 100%;
+            flex-shrink: 0;
+            border-radius: 9px;
+        }
+    }
+
     &_text {
         position: relative;
     }
