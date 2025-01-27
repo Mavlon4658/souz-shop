@@ -2467,3 +2467,122 @@ textarea {
     }
 }
 // gift_certificates
+
+
+// search-results
+.search_results {
+    padding-top: 200px;
+
+    @include media(992) {
+        padding-top: 135px;
+    }
+
+    &_text {
+        position: relative;
+    }
+
+    &_cards {
+        margin: 60px 0 80px 0;
+        gap: 60px 96px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include media(1200) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px 20px;
+        }
+
+        @include media(993) {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 30px 0 40px 0;
+        }
+    }
+
+    &_card {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        @include media(993) {
+            gap: 10px;
+        }
+
+        &_img {
+            position: relative;
+
+            svg {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                display: none;
+
+                @include media(993) {
+                    display: flex;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.2px;
+            color: #000;
+
+            @include media(993) {
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+
+        span {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 15.4px;
+            color: #6B7683;
+
+            @include media(993) {
+                font-size: 8px;
+                line-height: 8.8px;
+            }
+        }
+
+        h5 {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.05em;
+            color: #000000;
+
+            @include media(993) {
+                font-size: 16px;
+                line-height: 19.2px;
+            }
+        }
+
+        button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #C2E6F3;
+            flex-shrink: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            @include media(993) {
+                display: flex;
+            }
+        }
+    }
+}
+// search-results
