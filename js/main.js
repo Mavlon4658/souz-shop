@@ -50,7 +50,7 @@ window.addEventListener('scroll', function (e) {
             }
         }
     }
-    
+
     scrY1 = scrY2
 })
 
@@ -101,4 +101,4 @@ const anonsSwp = new Swiper('.anons__swp .swiper', {
         nextEl: '.anons__swp_next',
         prevEl: '.anons__swp_prev',
     }
-})
+});

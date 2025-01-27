@@ -2350,6 +2350,9 @@ textarea {
     width: 100%;
   }
 }
+.search_results .search_input .search_wrap {
+  width: 100%;
+}
 .search_results .search_input input {
   padding: 10px;
   height: 100%;
