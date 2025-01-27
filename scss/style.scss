@@ -1915,10 +1915,10 @@ textarea {
 // Product
 .product {
     padding: 130px 0 79px;
-    
+
     .container {
     }
-    
+
     &__head {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1929,14 +1929,14 @@ textarea {
             height: 560px;
             position: relative;
             z-index: 1;
-    
+
             .main-img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 5px;
             }
-    
+
             .zoom {
                 position: absolute;
                 width: 43px;
@@ -2123,7 +2123,7 @@ textarea {
                 grid-template-columns: repeat(5, minmax(0, 1fr));
                 gap: 10px;
                 margin-bottom: 15px;
-    
+
                 img {
                     width: 100%;
                     aspect-ratio: 1 / 1;
@@ -2131,7 +2131,7 @@ textarea {
                     object-fit: cover;
                     border-radius: 5px;
                 }
-    
+
                 p {
                     color: #656565;
                     font-size: 12px;
@@ -2140,7 +2140,7 @@ textarea {
                     line-height: 120%;
                 }
             }
-    
+
             .more-link {
                 color: #656565;
                 font-size: 14px;
@@ -2256,7 +2256,7 @@ textarea {
 // Anons
 .anons {
     padding-bottom: 60px;
-    
+
     &__title {
         font-size: 25px;
         font-weight: 500;
@@ -2337,3 +2337,133 @@ textarea {
     }
 }
 // Anons end
+
+// gift_certificates
+.gift_certificates {
+    padding-top: 200px;
+
+    @include media(992) {
+        padding-top: 135px;
+    }
+
+    &_in {
+        padding: 60px 0;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 131px;
+
+        @include media(993) {
+            grid-template-columns: repeat(1,1fr);
+            gap: 30px;
+            padding: 30px 0 60px;
+        }
+    }
+
+    &_img {
+        width: 400px;
+        height: 330px;
+        border-radius: 5px;
+        margin-bottom: 60px;
+        object-fit: cover;
+
+        @include media(993) {
+            margin-bottom: 0;
+        }
+
+        @include media(576) {
+            height: 260px;
+        }
+    }
+
+    &_text {
+        margin: 30px 0 60px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 539px;
+
+        @include media(993) {
+            margin: 30px 0;
+            max-width: 100%;
+            gap: 15px;
+        }
+    }
+
+    &_right {
+        @include media(993) {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
+    }
+
+    button {
+        margin-top: 38px;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.2px;
+        color: #000;
+        background: #C2E6F3;
+        padding: 13px 33px;
+        border-radius: 10px;
+
+        @include media(993) {
+            font-size: 12px;
+            line-height: 14px;
+            margin-top: 15px;
+            padding: 10px 27px;
+        }
+    }
+
+    .end_title {
+        text-align: center;
+        margin-bottom: 60px;
+
+        @include media(993) {
+            text-align: start;
+        }
+    }
+
+    h6 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23.6px;
+        color: #6B7683;
+        padding: 3px 10px;
+        border: 2px solid #01ABD3;
+        border-radius: 10px;
+        width: max-content;
+        margin-bottom: 30px;
+
+        @include media(993) {
+            padding: 8px 18px;
+            font-size: 16px;
+            line-height: 16px;
+            margin-bottom: 15px;
+        }
+    }
+
+    p,
+    address {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.2px;
+        color: #656565;
+
+        @include media(993) {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    address {
+        margin-top: 15px;
+    }
+}
+// gift_certificates
