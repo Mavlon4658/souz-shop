@@ -6,6 +6,44 @@ const bodyVisible = () => {
     document.querySelector('body').style.overflow = 'visible';
 }
 
+// count
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".product_list_count");
+
+    counters.forEach(counter => {
+        const decreaseBtn = counter.querySelector(".decrease");
+        const increaseBtn = counter.querySelector(".increase");
+        const countSpan = counter.querySelector(".count");
+
+        let count = parseInt(countSpan.textContent); // Boshlang‘ich qiymatni olish
+
+        decreaseBtn.addEventListener("click", function () {
+        if (count > 1) {
+            count--;
+            countSpan.textContent = count + " п.м.";
+        }
+        });
+
+        increaseBtn.addEventListener("click", function () {
+        count++;
+        countSpan.textContent = count + " п.м.";
+        });
+    });
+});
+// count
+
+// heart
+document.addEventListener("DOMContentLoaded", function () {
+    const heartButtons = document.querySelectorAll(".heart_icon");
+
+    heartButtons.forEach(button => {
+        button.addEventListener("click", function () {
+        this.classList.toggle("active");
+        });
+    });
+});
+// heart
+
 const headerSearchInp = document.querySelector('.header__search_inp input');
 const headerList = document.querySelector('.header__search_list');
 const headerSearchBtn = document.querySelectorAll('.header__search_inp button')[0];
