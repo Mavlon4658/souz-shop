@@ -3424,7 +3424,22 @@ textarea {
         top: 0;
         height: 100%;
         background: #01ABD3;
-        width: 18%;
+    }
+
+    &_range1 {
+        width: 17%;
+    }
+
+    &_range2 {
+        width: 50%;
+    }
+
+    &_range3 {
+        width: 82%;
+    }
+
+    &_range4 {
+        width: 100%;
     }
 
     &_block {

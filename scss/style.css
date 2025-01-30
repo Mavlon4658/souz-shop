@@ -3212,7 +3212,18 @@ textarea {
   top: 0;
   height: 100%;
   background: #01ABD3;
-  width: 18%;
+}
+.order_steps_range1 {
+  width: 17%;
+}
+.order_steps_range2 {
+  width: 50%;
+}
+.order_steps_range3 {
+  width: 82%;
+}
+.order_steps_range4 {
+  width: 100%;
 }
 .order_steps_block {
   display: flex;
