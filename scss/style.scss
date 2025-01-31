@@ -3278,6 +3278,10 @@ textarea {
         }
     }
 
+    &_bottom_confirmation {
+        justify-content: end;
+    }
+
     .one_bottom {
         display: flex;
         align-items: center;
@@ -3752,7 +3756,7 @@ textarea {
     opacity: 50%;
 }
 
-.placing_order_payment {
+.placing_order_confirmation {
 
 }
 // placing_order

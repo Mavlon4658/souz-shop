@@ -211,7 +211,7 @@
               </h3>
               <div class="order_steps">
                 <div class="order_steps_in">
-                  <div class="order_steps_range3 order_steps_range"></div>
+                  <div class="order_steps_range4 order_steps_range"></div>
                   <div class="order_steps_block active">
                     <div class="circle"></div>
                     <span>
@@ -230,7 +230,7 @@
                       Оплата
                     </span>
                   </div>
-                  <div class="order_steps_block">
+                  <div class="order_steps_block active">
                     <div class="circle"></div>
                     <span>
                       Подтверждение
@@ -239,71 +239,318 @@
                 </div>
               </div>
               <h6 class="product_title delivery_title">
-                Способ оплаты
+                Состав заказа
               </h6>
-              <div class="placing_order_delivery">
-                <div class="placing_order_delivery_card disabled_card">
-                  <div class="placing_order_check">
-                    <label for="radio1">
-                      <input type="radio" name="option" id="radio1" class="radio_input" disabled>
-                      <div class="custom-radio"></div>
-                      <p>
-                        Наличными
-                      </p>
-                    </label>
-                  </div>
-                  <p>
-                    Оплата наличными возможна при самовывозе в наших магазинах.
-                  </p>
+              <div class="product_list">
+                <div class="product_list_head">
+                  <span class="product_list_head_one">
+                    Описание
+                  </span>
+                  <span class="product_list_head_two">
+                    Цена
+                  </span>
+                  <span class="product_list_head_three">
+                    Количество
+                  </span>
+                  <span class="product_list_head_four">
+                    Сумма
+                  </span>
+                  <span class="product_list_head_five"></span>
                 </div>
-                <div class="placing_order_delivery_card">
-                  <div class="placing_order_check">
-                    <label for="radio2">
-                      <input type="radio" name="option" id="radio2" class="radio_input">
-                      <div class="custom-radio"></div>
-                      <p>
-                        Онлайн-оплата
-                      </p>
-                    </label>
+                <div class="product_list_in">
+                  <div class="product_list_block">
+                    <div class="product_list_img product_list_block_one">
+                      <img src="./images/product_list1.png" alt="">
+                      <div class="product_list_img_text">
+                        <h6>
+                          California 101
+                        </h6>
+                        <ul>
+                          <li>
+                            <span>
+                              Тип ткани:
+                            </span>
+                            <b>
+                              Велюр
+                            </b>
+                          </li>
+                          <li>
+                            <span>
+                              Коллекция:
+                            </span>
+                            <b>
+                              California
+                            </b>
+                          </li>
+                          <li>
+                            <span>
+                              Цвет:
+                            </span>
+                            <b>
+                              Розовый
+                            </b>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h6 class="price product_list_block_two">
+                      620 ₽
+                      <sub>
+                        / п.м.
+                      </sub>
+                    </h6>
+                    <div class="product_list_block_three">
+                      <div class="product_list_count">
+                        <button class="decrease">
+                          <svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1H8" stroke="#01ABD3"/>
+                          </svg>
+                        </button>
+                        <span class="count">
+                          17 п.м.
+                        </span>
+                        <button class="increase">
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 5H10" stroke="#01ABD3"/>
+                            <path d="M5 0L5 10" stroke="#01ABD3"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <h5 class="product_list_block_four">
+                      10  540 ₽
+                    </h5>
+                    <div class="product_list_btns product_list_block_five">
+                      <button class="heart_icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.51389 2.5C3.74517 2.5 1.5 4.76 1.5 7.547C1.5 13.125 11 19.5 11 19.5C11 19.5 20.5 13.125 20.5 7.547C20.5 4.094 18.2548 2.5 15.4861 2.5C13.5228 2.5 11.8233 3.636 11 5.29C10.1767 3.636 8.47722 2.5 6.51389 2.5Z" stroke="#656565" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                      <button class="delete_icon">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.4166 10.0833V15.5833M9.58325 10.0833V15.5833M5.74992 6.41667V17.4167C5.74992 17.9029 5.95185 18.3692 6.3113 18.713C6.67074 19.0568 7.15825 19.25 7.66659 19.25H15.3333C15.8416 19.25 16.3291 19.0568 16.6885 18.713C17.048 18.3692 17.2499 17.9029 17.2499 17.4167V6.41667M3.83325 6.41667H19.1666M6.70825 6.41667L8.62492 2.75H14.3749L16.2916 6.41667" stroke="#656565" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
-                  <p>
-                    Доставка Почтой России, CDEK, Boxberry возможна по всей России при заказе от 1000₽
-                  </p>
+                  <div class="product_list_block">
+                    <div class="product_list_img product_list_block_one">
+                      <img src="./images/product_list1.png" alt="">
+                      <div class="product_list_img_text">
+                        <h6>
+                          California 101
+                        </h6>
+                        <ul>
+                          <li>
+                            <span>
+                              Тип ткани:
+                            </span>
+                            <b>
+                              Велюр
+                            </b>
+                          </li>
+                          <li>
+                            <span>
+                              Коллекция:
+                            </span>
+                            <b>
+                              California
+                            </b>
+                          </li>
+                          <li>
+                            <span>
+                              Цвет:
+                            </span>
+                            <b>
+                              Розовый
+                            </b>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h6 class="price product_list_block_two">
+                      620 ₽
+                      <sub>
+                        / п.м.
+                      </sub>
+                    </h6>
+                    <div class="product_list_block_three">
+                      <div class="product_list_count">
+                        <button class="decrease">
+                          <svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1H8" stroke="#01ABD3"/>
+                          </svg>
+                        </button>
+                        <span class="count">
+                          2 п.м.
+                        </span>
+                        <button class="increase">
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 5H10" stroke="#01ABD3"/>
+                            <path d="M5 0L5 10" stroke="#01ABD3"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <h5 class="product_list_block_four">
+                      1  240 ₽
+                    </h5>
+                    <div class="product_list_btns product_list_block_five">
+                      <button class="heart_icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.51389 2.5C3.74517 2.5 1.5 4.76 1.5 7.547C1.5 13.125 11 19.5 11 19.5C11 19.5 20.5 13.125 20.5 7.547C20.5 4.094 18.2548 2.5 15.4861 2.5C13.5228 2.5 11.8233 3.636 11 5.29C10.1767 3.636 8.47722 2.5 6.51389 2.5Z" stroke="#656565" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                      <button class="delete_icon">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.4166 10.0833V15.5833M9.58325 10.0833V15.5833M5.74992 6.41667V17.4167C5.74992 17.9029 5.95185 18.3692 6.3113 18.713C6.67074 19.0568 7.15825 19.25 7.66659 19.25H15.3333C15.8416 19.25 16.3291 19.0568 16.6885 18.713C17.048 18.3692 17.2499 17.9029 17.2499 17.4167V6.41667M3.83325 6.41667H19.1666M6.70825 6.41667L8.62492 2.75H14.3749L16.2916 6.41667" stroke="#656565" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product_list_block">
+                    <div class="product_list_img product_list_block_one">
+                      <img src="./images/product_list2.png" alt="">
+                      <div class="product_list_img_text">
+                        <h6>
+                          Конверт кастомный
+                        </h6>
+                        <ul>
+                          <li>
+                            <span>
+                              Количество<br> образцов:
+                            </span>
+                            <b>
+                              5 шт
+                            </b>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h6 class="price product_list_block_two">
+                      <sub>
+
+                      </sub>
+                    </h6>
+                    <div class="product_list_block_three">
+                      <div class="product_list_count disabled">
+                        <button class="decrease">
+                          <svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1H8" stroke="#01ABD3"/>
+                          </svg>
+                        </button>
+                        <span class="count">
+                          2 п.м.
+                        </span>
+                        <button class="increase">
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 5H10" stroke="#01ABD3"/>
+                            <path d="M5 0L5 10" stroke="#01ABD3"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <h5 class="product_list_block_four">
+                      800 ₽
+                    </h5>
+                    <div class="product_list_btns product_list_block_five">
+                      <button class="heart_icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.51389 2.5C3.74517 2.5 1.5 4.76 1.5 7.547C1.5 13.125 11 19.5 11 19.5C11 19.5 20.5 13.125 20.5 7.547C20.5 4.094 18.2548 2.5 15.4861 2.5C13.5228 2.5 11.8233 3.636 11 5.29C10.1767 3.636 8.47722 2.5 6.51389 2.5Z" stroke="#656565" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                      <button class="delete_icon">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.4166 10.0833V15.5833M9.58325 10.0833V15.5833M5.74992 6.41667V17.4167C5.74992 17.9029 5.95185 18.3692 6.3113 18.713C6.67074 19.0568 7.15825 19.25 7.66659 19.25H15.3333C15.8416 19.25 16.3291 19.0568 16.6885 18.713C17.048 18.3692 17.2499 17.9029 17.2499 17.4167V6.41667M3.83325 6.41667H19.1666M6.70825 6.41667L8.62492 2.75H14.3749L16.2916 6.41667" stroke="#656565" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product_list_block product_list_block_end">
+                    <div class="product_list_img product_list_block_one">
+                      <img src="./images/product_list2.png" alt="">
+                      <div class="product_list_img_text">
+                        <h6>
+                          Сэмпл-бокс Warming Brown
+                        </h6>
+                        <ul>
+                          <li>
+                            <span>
+                              Количество<br> образцов:
+                            </span>
+                            <b>
+                              30 шт
+                            </b>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h6 class="price product_list_block_two">
+                      <sub>
+
+                      </sub>
+                    </h6>
+                    <div class="product_list_block_three">
+                      <div class="product_list_count disabled">
+                        <button class="decrease">
+                          <svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1H8" stroke="#01ABD3"/>
+                          </svg>
+                        </button>
+                        <span class="count">
+                          2 п.м.
+                        </span>
+                        <button class="increase">
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 5H10" stroke="#01ABD3"/>
+                            <path d="M5 0L5 10" stroke="#01ABD3"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <h5 class="product_list_block_four">
+                      2000 ₽
+                    </h5>
+                    <div class="product_list_btns product_list_block_five">
+                      <button class="heart_icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.51389 2.5C3.74517 2.5 1.5 4.76 1.5 7.547C1.5 13.125 11 19.5 11 19.5C11 19.5 20.5 13.125 20.5 7.547C20.5 4.094 18.2548 2.5 15.4861 2.5C13.5228 2.5 11.8233 3.636 11 5.29C10.1767 3.636 8.47722 2.5 6.51389 2.5Z" stroke="#656565" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                      <button class="delete_icon">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.4166 10.0833V15.5833M9.58325 10.0833V15.5833M5.74992 6.41667V17.4167C5.74992 17.9029 5.95185 18.3692 6.3113 18.713C6.67074 19.0568 7.15825 19.25 7.66659 19.25H15.3333C15.8416 19.25 16.3291 19.0568 16.6885 18.713C17.048 18.3692 17.2499 17.9029 17.2499 17.4167V6.41667M3.83325 6.41667H19.1666M6.70825 6.41667L8.62492 2.75H14.3749L16.2916 6.41667" stroke="#656565" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product_list_end">
+                    <span>
+                      Общая сумма:
+                    </span>
+                    <h6>
+                      14  580 ₽
+                    </h6>
+                  </div>
                 </div>
-                <div class="placing_order_delivery_card">
-                  <div class="placing_order_check icon_check">
-                    <label for="radio3">
-                      <input type="radio" name="option" id="radio3" class="radio_input">
-                      <div class="custom-radio"></div>
-                      <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1.125" y="1.125" width="24.75" height="24.75" rx="12.375" fill="black"/>
-                        <g clip-path="url(#clip0_845_4203)">
-                        <path d="M20.4609 7.89648H18.5913V17.3776H20.4609V7.89648Z" fill="white"/>
-                        <path d="M16.4435 8.42702H14.5739V17.908H16.4435V8.42702Z" fill="white"/>
-                        <path d="M12.4261 9.0193H10.5565V18.502H12.4261V9.0193Z" fill="white"/>
-                        <path d="M8.40874 9.61817H6.53906L6.53907 19.1021H8.40875L8.40874 9.61817Z" fill="white"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_845_4203">
-                        <rect width="13.9219" height="13.9219" fill="white" transform="translate(6.53906 6.53906)"/>
-                        </clipPath>
-                        </defs>
-                      </svg>
-                      <p>
-                        Оплата Долями
-                      </p>
-                    </label>
+                <div class="product_list_bottom product_list_bottom_confirmation">
+                  <div class="product_list_bottom_right">
+                    <div class="product_list_total">
+                      <span>
+                        Общая сумма:
+                      </span>
+                      <h6>
+                        14  580 ₽
+                      </h6>
+                    </div>
                   </div>
-                  <p>
-                    Сервис «Долями» помогает разделить сумму покупки на четыре платежа, а покупку вы получите сразу после оплаты первой части
-                  </p>
                 </div>
               </div>
               <div class="product_list">
                 <div class="product_list_bottom">
                   <a href="#" class="prev_btn">
                     <span>
-                      Вернуться к вариантам доставки
+                      Вернуться к вариантам оплаты
                     </span>
                     <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646447 3.64645ZM21 4.5C21.2761 4.5 21.5 4.27614 21.5 4C21.5 3.72386 21.2761 3.5 21 3.5V4.5ZM1 4.5H21V3.5H1V4.5Z" fill="#01ABD3"/>
@@ -311,7 +558,7 @@
                   </a>
                   <div class="product_list_bottom_right">
                     <a href="#" class="next_btn">
-                      Далее
+                      Оформить заказ
                     </a>
                   </div>
                 </div>

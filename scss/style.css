@@ -3068,6 +3068,9 @@ textarea {
     line-height: 14.4px;
   }
 }
+.product_list_bottom_confirmation {
+  justify-content: end;
+}
 .product_list .one_bottom {
   display: flex;
   align-items: center;
