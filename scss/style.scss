@@ -109,6 +109,61 @@ textarea {
     }
 }
 
+.placing_order_check {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    @include media(993) {
+        gap: 11px;
+        margin-top: 2px;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+
+        @include media(993) {
+            gap: 11px;
+        }
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .custom-radio {
+        flex-shrink: 0;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #01ABD3;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+    }
+
+    input[type="radio"]:checked + .custom-radio::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-color: #01ABD3;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.icon_check {
+    label {
+        gap: 4px;
+    }
+}
+
 .breadcrumbs {
     display: flex;
     align-items: center;
@@ -3394,7 +3449,7 @@ textarea {
             margin-bottom: 15px;
             font-size: 16px;
             line-height: 16px;
-            padding: 7px 8px;
+            padding: 7px 15px;
         }
     }
 }
@@ -3548,33 +3603,34 @@ textarea {
                 gap: 11px;
             }
         }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .custom-radio {
+            width: 25px;
+            height: 25px;
+            border: 1px solid #01ABD3;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        input[type="radio"]:checked + .custom-radio::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-color: #01ABD3;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
-    input[type="radio"] {
-        display: none;
-    }
-
-    .custom-radio {
-        width: 25px;
-        height: 25px;
-        border: 1px solid #01ABD3;
-        border-radius: 50%;
-        display: inline-block;
-        position: relative;
-        cursor: pointer;
-    }
-
-    input[type="radio"]:checked + .custom-radio::after {
-        content: "";
-        width: 15px;
-        height: 15px;
-        background-color: #01ABD3;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
 
     p {
         max-width: 304px;
@@ -3598,5 +3654,105 @@ textarea {
         gap: 5px;
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+.delivery_title {
+    margin-top: 60px;
+
+    @include media(1200) {
+        margin-top: 70px;
+    }
+}
+
+.placing_order_delivery {
+    padding: 30px 0 60px 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 100px;
+
+    @include media(993) {
+        padding: 30px 0;
+        gap: 30px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .placing_order_check {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin: 0 0 30px 0;
+
+        @include media(993) {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 23.6px;
+            color: #6B7683;
+
+            @include media(993) {
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23.6px;
+        color: #6B7683;
+
+        @include media(993) {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    ul {
+        margin-top: 30px;
+
+        @include media(993) {
+            margin-top: 10px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 23px;
+        }
+
+        span,
+        b {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 23.6px;
+
+            @include media(993) {
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+
+        span {
+            width: 107px;
+            color: #6B7683;
+            opacity: 50%;
+        }
+
+        b {
+            color: #6B7683;
+        }
+    }
+}
+
+.disabled_card {
+    opacity: 50%;
+}
+
+.placing_order_payment {
+
 }
 // placing_order
