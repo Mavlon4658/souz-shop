@@ -3068,8 +3068,24 @@ textarea {
     line-height: 14.4px;
   }
 }
+@media screen and (max-width: 993px) {
+  .product_list .confirmation_btns {
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .product_list .confirmation_btns .product_list_bottom_right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 993px) {
+  .product_list .confirmation_btns .next_btn {
+    width: 100%;
+  }
+}
 .product_list_bottom_confirmation {
   justify-content: end;
+  margin-bottom: 0;
 }
 .product_list .one_bottom {
   display: flex;
@@ -3524,4 +3540,64 @@ textarea {
 
 .disabled_card {
   opacity: 50%;
+}
+
+.confirmation_title {
+  margin: 30px 0 0 0;
+}
+@media screen and (max-width: 993px) {
+  .confirmation_title {
+    margin: 0;
+  }
+}
+
+.confirmation_blocks {
+  margin: 30px 0 60px 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+@media screen and (max-width: 993px) {
+  .confirmation_blocks {
+    margin: 30px 0;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.confirmation_blocks h6 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 25.96px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 993px) {
+  .confirmation_blocks h6 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.confirmation_blocks ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.confirmation_blocks li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #656565;
+}
+@media screen and (max-width: 993px) {
+  .confirmation_blocks li {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.confirmation_blocks li b {
+  color: #000000;
 }/*# sourceMappingURL=style.css.map */
