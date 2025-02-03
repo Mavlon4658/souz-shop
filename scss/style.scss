@@ -3853,18 +3853,19 @@ textarea {
     }
 
     &_in {
+        max-width: 1090px;
+        margin: 0 auto 80px auto;
         position: relative;
         padding: 30px;
         border: 1px solid #EBF6FB;
         box-shadow: 2px 2px 24px 0px #6B76831A;
         border-radius: 5px;
-        margin-bottom: 80px;
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 100px;
 
         @include media(993) {
-            margin-bottom: 40px;
+            margin: 0 auto 40px auto;
             padding: 30px 10px;
             gap: 60px;
             grid-template-columns: repeat(1,1fr);
@@ -3931,13 +3932,13 @@ textarea {
         justify-content: space-between;
     }
 
-    &_block_two {
+    &_block_one {
         position: relative;
 
         &::before {
             content: '';
             position: absolute;
-            left: -50px;
+            right: -50px;
             height: 100%;
             width: 1px;
             background: #6B768333;
@@ -4013,3 +4014,100 @@ textarea {
 
 }
 // login-register
+
+// recover-password
+.recover_password {
+    padding-top: 200px;
+
+    @include media(992) {
+        padding-top: 135px;
+    }
+
+    .main_title {
+        margin: 30px 0 60px 0;
+
+        @include media(993) {
+            margin: 30px 0;
+        }
+    }
+
+    &_in {
+        padding: 30px;
+        border: 1px solid #EBF6FB;
+        box-shadow: 2px 2px 24px 0px #6B76831A;
+        border-radius: 5px;
+        max-width: 1090px;
+        margin: 0 auto 80px auto;
+
+        @include media(993) {
+            margin: 0 auto 40px auto;
+            padding: 30px 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        h6 {
+            font-family: $font-tt-norms;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 23.6px;
+            color: #000000;
+
+            @include media(993) {
+                font-size: 12px;
+                line-height: 14.4px;
+            }
+        }
+
+        button {
+            font-family: $font-tt-norms;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.2px;
+            text-align: center;
+            color: #000000;
+            padding: 13px 110px;
+            border-radius: 10px;
+            background: #C2E6F3;
+
+            @include media(993) {
+                width: 100%;
+                height: 40px;
+                font-size: 12px;
+                line-height: 14.4px;
+            }
+        }
+
+        .form_btns {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @include media(993) {
+                width: 100%;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            a {
+                font-family: $font-tt-norms;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19.2px;
+                text-align: center;
+                text-decoration-line: underline;
+                color: #656565;
+
+                @include media(993) {
+                    font-size: 12px;
+                    line-height: 14.4px;
+                }
+            }
+        }
+    }
+}
+// recover-password

@@ -3619,19 +3619,20 @@ textarea {
   }
 }
 .login_register_in {
+  max-width: 1090px;
+  margin: 0 auto 80px auto;
   position: relative;
   padding: 30px;
   border: 1px solid #EBF6FB;
   box-shadow: 2px 2px 24px 0px rgba(107, 118, 131, 0.1019607843);
   border-radius: 5px;
-  margin-bottom: 80px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
 }
 @media screen and (max-width: 993px) {
   .login_register_in {
-    margin-bottom: 40px;
+    margin: 0 auto 40px auto;
     padding: 30px 10px;
     gap: 60px;
     grid-template-columns: repeat(1, 1fr);
@@ -3694,19 +3695,19 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
 }
-.login_register_block_two {
+.login_register_block_one {
   position: relative;
 }
-.login_register_block_two::before {
+.login_register_block_one::before {
   content: "";
   position: absolute;
-  left: -50px;
+  right: -50px;
   height: 100%;
   width: 1px;
   background: rgba(107, 118, 131, 0.2);
 }
 @media screen and (max-width: 993px) {
-  .login_register_block_two::before {
+  .login_register_block_one::before {
     left: 0;
     top: -30px;
     width: 100%;
@@ -3768,6 +3769,101 @@ textarea {
 }
 @media screen and (max-width: 993px) {
   .login_register .form_btns a {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+
+.recover_password {
+  padding-top: 200px;
+}
+@media screen and (max-width: 992px) {
+  .recover_password {
+    padding-top: 135px;
+  }
+}
+.recover_password .main_title {
+  margin: 30px 0 60px 0;
+}
+@media screen and (max-width: 993px) {
+  .recover_password .main_title {
+    margin: 30px 0;
+  }
+}
+.recover_password_in {
+  padding: 30px;
+  border: 1px solid #EBF6FB;
+  box-shadow: 2px 2px 24px 0px rgba(107, 118, 131, 0.1019607843);
+  border-radius: 5px;
+  max-width: 1090px;
+  margin: 0 auto 80px auto;
+}
+@media screen and (max-width: 993px) {
+  .recover_password_in {
+    margin: 0 auto 40px auto;
+    padding: 30px 10px;
+  }
+}
+.recover_password_in form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.recover_password_in h6 {
+  font-family: "TT Norms", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.6px;
+  color: #000000;
+}
+@media screen and (max-width: 993px) {
+  .recover_password_in h6 {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+.recover_password_in button {
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-align: center;
+  color: #000000;
+  padding: 13px 110px;
+  border-radius: 10px;
+  background: #C2E6F3;
+}
+@media screen and (max-width: 993px) {
+  .recover_password_in button {
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+.recover_password_in .form_btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 993px) {
+  .recover_password_in .form_btns {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.recover_password_in .form_btns a {
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #656565;
+}
+@media screen and (max-width: 993px) {
+  .recover_password_in .form_btns a {
     font-size: 12px;
     line-height: 14.4px;
   }
