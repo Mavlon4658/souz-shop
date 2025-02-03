@@ -1990,9 +1990,257 @@ textarea {
 }
 // footer
 
+// Main modal
+.main-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        display: flex;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(101, 101, 101, 0.5);
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media(600) {
+            top: 10px;
+            right: 10px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: 540px;
+        padding: 60px 60px 64px;
+        background: white;
+
+        @include media(600) {
+            width: calc(100% - 30px);
+            padding: 30px 15px;
+        }
+    }
+}
+// Main modal end
+
+// Call modal
+.call-modal {
+    h2 {
+        font-size: 40px;
+        line-height: 100%;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 30px;
+
+        @include media(600) {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin-bottom: 20px;
+
+        @include media(600) {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+
+            &::placeholder {
+                color: #656565;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .btn-lightblue {
+        width: 100%;
+    }
+
+    p {
+        margin: 15px 0 84px;
+        text-align: center;
+        color: #656565;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 110%;
+        opacity: 0.5;
+
+        @include media(600) {
+            margin: 10px 0 40px;
+            font-size: 12px;
+        }
+
+        a {
+            display: inline;
+            color: #01ABD3;
+        }
+    }
+
+    .phone-link {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+
+        span {
+            font-size: 20px;
+            font-weight: 500;
+            color: #6B7683;
+
+            @include media(600) {
+                font-size: 14px;
+            }
+        }
+
+        a {
+            color: black;
+            font-size: 20px;
+            font-weight: 500;
+            position: relative;
+
+            @include media(600) {
+                font-size: 14px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: -5px;
+                width: calc(100% + 10px);
+                height: 1px;
+                background: #6B7683;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+// Call modal end
+
+// Zoom modal
+.zoom-modal {
+    .main-modal {
+        &__content {
+            padding: 0;
+            width: 920px;
+            background: transparent;
+
+            @include media(1030) {
+                width: calc(100% - 30px);
+            }
+        }
+
+        &__close {
+            width: auto;
+            height: auto;
+            top: -12px;
+            right: -12px;
+            transform: translate(100%, -100%);
+
+            @include media(1030) {
+                top: 12px;
+                right: 12px;
+                transform: translate(0);
+                z-index: 2;
+            }
+
+            img {
+                filter: invert(1);
+            }
+        }
+    }
+
+    .swp-btn {
+        width: 30px;
+        height: 30px;
+        background: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+
+        &:hover {
+            svg path,
+            svg line {
+                stroke: #01ABD3;
+            }
+        }
+
+        &__prev {
+            left: -50px;
+            
+            @include media(1030) {
+                left: -15px;
+            }
+        }
+
+        &__next {
+            right: -50px;
+            
+            @include media(1030) {
+                right: -15px;
+            }
+        }
+    }
+
+    .swiper {
+        &-slide {
+            height: 600px;
+
+            @include media(992) {
+                height: 550px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+// Zoom modal end
+
 // Product
 .product {
     padding: 130px 0 79px;
+
+    @include media(992) {
+        padding: 120px 0 52px;
+    }
 
     .container {
     }
@@ -2003,10 +2251,21 @@ textarea {
         gap: 25px;
         margin-bottom: 15px;
 
+        @include media(992) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 15px;
+            margin-bottom: 13px;
+        }
+
         .card {
-            height: 560px;
+            min-height: 560px;
             position: relative;
             z-index: 1;
+
+            @include media(992) {
+                order: 2;
+                min-height: 250px;
+            }
 
             .main-img {
                 width: 100%;
@@ -2027,6 +2286,10 @@ textarea {
                 left: 10px;
                 bottom: 11px;
                 background: #FFF;
+
+                @include media(992) {
+                    display: none;
+                }
             }
         }
     }
@@ -2036,11 +2299,19 @@ textarea {
         flex-direction: column;
         justify-content: space-between;
 
+        @include media(992) {
+            order: 1;
+        }
+
         .breadcrumb {
             font-size: 20px;
             font-weight: 500;
             color: #A2A2A2;
             margin-bottom: 30px;
+
+            @include media(992) {
+                font-size: 9px;
+            }
 
             a {
                 display: inline;
@@ -2057,6 +2328,11 @@ textarea {
             font-weight: 500;
             line-height: 100%;
             margin-bottom: 5px;
+
+            @include media(992) {
+                font-size: 30px;
+                margin-bottom: 3px;
+            }
         }
 
         .available {
@@ -2069,6 +2345,11 @@ textarea {
             margin-bottom: 29px;
             font-weight: 500;
 
+            @include media(992) {
+                font-size: 12px;
+                margin-bottom: 14px;
+            }
+
             &-error {
                 color: #FF7171;
             }
@@ -2079,6 +2360,10 @@ textarea {
             line-height: 120%;
             font-weight: 500;
             margin-bottom: 8px;
+
+            @include media(992) {
+                display: none;
+            }
         }
 
         .subtitle {
@@ -2100,10 +2385,30 @@ textarea {
             gap: 10px;
             margin-bottom: 10px;
 
+            @include media(992) {
+                gap: 4px;
+                font-size: 24px;
+                margin-bottom: 0;
+            }
+
             span {
                 font-size: 16px;
                 line-height: 120%;
                 padding-bottom: 4px;
+
+                @include media(992) {
+                    font-size: 12px;
+                    padding-bottom: 0;
+                }
+            }
+
+            &-wrap {
+                @include media(992) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 17px;
+                }
             }
         }
 
@@ -2118,6 +2423,19 @@ textarea {
             background: #EBF6FB;
             border-radius: 5px;
             padding: 11px 16px 11px 15px;
+
+            @include media(992) {
+                height: 30px;
+                padding: 0 11px;
+
+                span {
+                    display: none;
+                }
+
+                img {
+                    width: 59px;
+                }
+            }
         }
 
         .quantitiy {
@@ -2126,16 +2444,26 @@ textarea {
             width: 100%;
             gap: 15px;
 
+            @include media(992) {
+                flex-direction: row;
+                gap: 5px;
+            }
+
             &_top {
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                flex-shrink: 0;
 
                 h4 {
                     font-size: 16px;
                     line-height: 120%;
                     font-weight: 500;
                     color: #656565;
+
+                    @include media(992) {
+                        display: none;
+                    }
                 }
 
                 .calculate {
@@ -2143,6 +2471,16 @@ textarea {
                     align-items: center;
                     border: 1px solid #656565;
                     border-radius: 2px;
+                    flex-shrink: 0;
+
+                    @include media(992) {
+                        border: 0.7px solid #656565;
+                        border-radius: 10px;
+                        width: 100px;
+                        justify-content: space-between;
+                        padding: 0 10px;
+                        gap: 0px;
+                    }
 
                     p {
                         font-size: 14px;
@@ -2151,6 +2489,10 @@ textarea {
                         color: #656565;
                         padding: 0 6px;
                         flex-shrink: 0;
+
+                        @include media(992) {
+                            font-size: 12px;
+                        }
                     }
 
                     button {
@@ -2160,7 +2502,22 @@ textarea {
                         justify-content: center;
                         padding: 0 4px;
                         flex-shrink: 0;
+
+                        @include media(992) {
+                            height: 35px;
+                        }
                     }
+                }
+            }
+
+            a.btn-lightblue {
+                @include media(992) {
+                    width: 100%;
+                    height: 35px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
                 }
             }
         }
@@ -2179,6 +2536,11 @@ textarea {
                 justify-content: center;
                 flex-shrink: 0;
 
+                @include media(992) {
+                    width: 35px;
+                    height: 35px;
+                }
+
                 &.active {
                     svg {
                         path {
@@ -2195,6 +2557,11 @@ textarea {
         gap: 25px;
         grid-template-columns: repeat(2, minmax(0, 1fr));
 
+        @include media(992) {
+            gap: 60px;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
         &_left {
             ul {
                 display: grid;
@@ -2202,12 +2569,27 @@ textarea {
                 gap: 10px;
                 margin-bottom: 15px;
 
+                @include media(992) {
+                    grid-template-columns: repeat(4, minmax(0, 1fr));
+                    gap: 10px 6px;
+
+                    li {
+                        &:nth-child(n+9) {
+                            display: none;
+                        }
+                    }
+                }
+
                 img {
                     width: 100%;
                     aspect-ratio: 1 / 1;
                     margin-bottom: 5px;
                     object-fit: cover;
                     border-radius: 5px;
+
+                    @include media(992) {
+                        margin-bottom: 3px;
+                    }
                 }
 
                 p {
@@ -2216,6 +2598,10 @@ textarea {
                     font-weight: 500;
                     text-align: center;
                     line-height: 120%;
+
+                    @include media(992) {
+                        font-size: 8px;
+                    }
                 }
             }
 
@@ -2224,11 +2610,19 @@ textarea {
                 font-size: 14px;
                 line-height: 120%;
                 text-decoration: underline;
+
+                @include media(992) {
+                    font-size: 12px;
+                }
             }
         }
 
         &_right {
             padding-top: 35px;
+
+            @include media(992) {
+                padding-top: 0;
+            }
 
             .accordion {
                 &_btn {
@@ -2242,20 +2636,41 @@ textarea {
                     font-weight: 500;
                     color: #6B7683;
                     border-bottom: 1px solid rgba(107, 118, 131, 0.5);
+
+                    img:nth-child(2) {
+                        display: none;
+                    }
+
+                    @include media(992) {
+                        font-size: 16px;
+                        padding: 15px 0;
+                    }
                 }
 
                 &_body {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease-in-out;
+
                     .text-wrap {
                         padding: 20px 0;
                         display: flex;
                         flex-direction: column;
                         gap: 20px;
 
+                        @include media(992) {
+                            padding: 15px 0 9px;
+                        }
+
                         p {
                             font-size: 16px;
                             font-weight: 500;
                             line-height: 120%;
                             color: #656565;
+
+                            @include media(992) {
+                                font-size: 12px;
+                            }
                         }
                     }
 
@@ -2264,6 +2679,11 @@ textarea {
                         flex-direction: column;
                         gap: 8px;
                         padding: 20px 0;
+
+                        @include media(992) {
+                            padding: 15px 0 25px;
+                            gap: 10px;
+                        }
 
                         li {
                             display: flex;
@@ -2276,6 +2696,11 @@ textarea {
                             line-height: 120%;
                             font-weight: 500;
                             color: #6B7683;
+
+                            @include media(992) {
+                                font-size: 12px;
+                                width: 175px;
+                            }
                         }
 
                         p {
@@ -2283,6 +2708,10 @@ textarea {
                             font-weight: 500;
                             line-height: 120%;
                             color: #656565;
+
+                            @include media(992) {
+                                font-size: 12px;
+                            }
                         }
                     }
 
@@ -2291,6 +2720,12 @@ textarea {
                         grid-template-columns: repeat(2, minmax(0, 1fr));
                         gap: 20px 50px;
                         padding: 20px 0;
+
+                        @include media(992) {
+                            gap: 20px;
+                            grid-template-columns: repeat(1, minmax(0, 1fr));
+                            padding: 15px 0 25px;
+                        }
 
                         li {
                             display: flex;
@@ -2304,6 +2739,17 @@ textarea {
                             justify-content: center;
                             flex-shrink: 0;
                         }
+
+                        p {
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: #656565;
+                            line-height: 120%;
+
+                            @include media(992) {
+                                font-size: 12px;
+                            }
+                        }
                     }
 
                     .delivery {
@@ -2312,11 +2758,21 @@ textarea {
                         gap: 20px;
                         padding-top: 20px;
 
+                        @include media(992) {
+                            gap: 15px;
+                            padding-top: 25px;
+                        }
+
                         li {
                             font-size: 16px;
                             line-height: 120%;
                             font-weight: 500;
                             color: #656565;
+
+                            @include media(992) {
+                                font-size: 12px;
+                                line-height: 123%;
+                            }
                         }
 
                         a {
@@ -2325,11 +2781,77 @@ textarea {
                         }
                     }
                 }
+
+                &.active {
+                    img {
+                        display: block;
+
+                        &:nth-child(3) {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
     }
 }
 // Product end
+
+// Read box
+.read-box {
+    &__content {
+        .title {
+            margin-bottom: 20px;
+        }
+
+        .description {
+            max-width: 544px;
+            color: #656565;
+            margin-bottom: 43px;
+        }
+
+        .inside-list {
+            display: grid;
+            grid-template-columns: repeat(8, minmax(0, 1fr));
+            gap: 30px;
+
+            @include media(1200) {
+                grid-template-columns: repeat(6, minmax(0, 1fr));
+            }
+
+            @include media(420) {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+            }
+
+            h5 {
+                font-size: 14px;
+                line-height: 110%;
+                font-weight: 500;
+                color: black;
+            }
+
+            h6 {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 110%;
+                color: #656565;
+            }
+
+            &__wrap {
+                margin-bottom: 55px;
+
+                p {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 120%;
+                    margin-bottom: 20px;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+// Read box end
 
 // Anons
 .anons {
@@ -2341,6 +2863,11 @@ textarea {
         line-height: 100%;
         text-align: center;
         margin-bottom: 30px;
+
+        @include media(992) {
+            font-size: 16px;
+            margin-bottom: 13px;
+        }
     }
 
     &__swp {
@@ -2359,6 +2886,10 @@ textarea {
             justify-content: center;
             border: 1px solid #656565;
             border-radius: 5px;
+
+            @include media(992) {
+                display: none;
+            }
         }
 
         &_prev {
@@ -2372,10 +2903,27 @@ textarea {
         }
     }
 
+    .swiper {
+        &-wrapper {
+            @include media(992) {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px 10px;
+            }
+        }
+    }
+
     &__card {
         .main-img {
             height: 366px;
             margin-bottom: 10px;
+            background: #C4C4C4;
+            border-radius: 5px;
+
+            @include media(992) {
+                height: 180px;
+                margin-bottom: 5px;
+            }
 
             img {
                 width: 100%;
@@ -2389,6 +2937,10 @@ textarea {
             font-size: 16px;
             font-weight: 500;
             line-height: 120%;
+
+            @include media(992) {
+                font-size: 12px;
+            }
         }
 
         p {
@@ -2397,6 +2949,10 @@ textarea {
             color: #6B7683;
             line-height: 120%;
             margin-bottom: 5px;
+
+            @include media(992) {
+                font-style: 12px;
+            }
         }
 
         h3 {
@@ -2404,6 +2960,10 @@ textarea {
             font-weight: 500;
             line-height: 120%;
             letter-spacing: -0.3px;
+
+            @include media(992) {
+                font-size: 16px;
+            }
         }
     }
 
@@ -2412,6 +2972,10 @@ textarea {
         align-items: center;
         justify-content: center;
         padding-top: 30px;
+
+        .btn-lightblue {
+            padding: 13px 23px;
+        }
     }
 }
 // Anons end
