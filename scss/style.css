@@ -3602,6 +3602,137 @@ textarea {
   color: #000000;
 }
 
+.personal_account_wrapper {
+  max-width: 1090px;
+  margin: 0 auto 80px auto;
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+}
+@media screen and (max-width: 993px) {
+  .personal_account_wrapper {
+    flex-direction: column-reverse;
+    margin: 0 auto 40px auto;
+  }
+}
+
+.personal_account_blocks {
+  width: 100%;
+  padding: 30px;
+  border: 1px solid #EBF6FB;
+  box-shadow: 2px 2px 24px 0px rgba(107, 118, 131, 0.1019607843);
+  border-radius: 5px;
+}
+@media screen and (max-width: 993px) {
+  .personal_account_blocks {
+    padding: 30px 10px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .personal_account_links_wrapper {
+    width: 100%;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+  }
+}
+.personal_account_links_wrapper::-webkit-scrollbar {
+  cursor: grab;
+  height: 1px;
+  display: none;
+}
+@media screen and (max-width: 390px) {
+  .personal_account_links_wrapper::-webkit-scrollbar {
+    display: block;
+  }
+}
+.personal_account_links_wrapper::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #D9D9D9;
+}
+.personal_account_links_wrapper::-webkit-scrollbar-thumb {
+  background: #7C7C7C;
+  border-radius: 10px;
+}
+
+.personal_account_links {
+  width: 310px;
+  flex-shrink: 0;
+  background: #EBF6FB;
+  border-radius: 5px;
+  padding: 18px 14px;
+}
+@media screen and (max-width: 993px) {
+  .personal_account_links {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    background: transparent;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 390px) {
+  .personal_account_links {
+    width: 390px;
+  }
+}
+.personal_account_links li {
+  display: flex;
+  align-items: center;
+}
+.personal_account_links a {
+  white-space: nowrap;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-family: "TT Norms", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.6px;
+  color: #656565;
+  transition: 0.2s ease;
+}
+.personal_account_links a br {
+  display: none;
+}
+@media screen and (max-width: 993px) {
+  .personal_account_links a br {
+    display: block;
+  }
+}
+@media screen and (max-width: 993px) {
+  .personal_account_links a {
+    text-align: center;
+    padding: 0;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000;
+    border: none;
+  }
+}
+.personal_account_links a.active {
+  border: 2px solid #01ABD3;
+  color: #000;
+}
+@media screen and (max-width: 993px) {
+  .personal_account_links a.active {
+    border: none;
+    color: #01ABD3;
+  }
+}
+.personal_account_links a:hover {
+  border: 2px solid #01ABD3;
+  color: #000;
+}
+@media screen and (max-width: 993px) {
+  .personal_account_links a:hover {
+    border: none;
+    color: #01ABD3;
+  }
+}
+
 .login_register {
   padding-top: 200px;
 }
@@ -3900,5 +4031,97 @@ textarea {
 @media screen and (max-width: 993px) {
   .recover_password_in_end .form_btns {
     align-items: start;
+  }
+}
+
+.personal_data {
+  padding-top: 200px;
+}
+@media screen and (max-width: 992px) {
+  .personal_data {
+    padding-top: 135px;
+  }
+}
+.personal_data .main_title {
+  margin: 30px 0 60px 0;
+}
+@media screen and (max-width: 993px) {
+  .personal_data .main_title {
+    margin: 30px 0;
+  }
+}
+.personal_data_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (max-width: 993px) {
+  .personal_data_content {
+    gap: 15px;
+  }
+}
+.personal_data_content li {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+@media screen and (max-width: 993px) {
+  .personal_data_content li {
+    align-items: start;
+    gap: 5px;
+    flex-direction: column;
+  }
+}
+.personal_data_content span {
+  width: 120px;
+}
+.personal_data_content span,
+.personal_data_content b {
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+}
+.personal_data_content span {
+  color: #7C7C7C;
+}
+.personal_data_content b {
+  color: #000000;
+}
+.personal_data .personal_data_btn {
+  margin-top: 30px;
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-align: center;
+  color: #000000;
+  border-radius: 10px;
+  background: #C2E6F3;
+  padding: 13px 54px;
+  height: 45px;
+}
+@media screen and (max-width: 993px) {
+  .personal_data .personal_data_btn {
+    width: 100%;
+    margin-top: 20px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.personal_data_name {
+  font-family: "TT Norms", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.6px;
+  color: #000;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 993px) {
+  .personal_data_name {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
