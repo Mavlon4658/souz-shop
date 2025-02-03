@@ -3617,4 +3617,158 @@ textarea {
   .login_register .main_title {
     margin: 30px 0;
   }
+}
+.login_register_in {
+  position: relative;
+  padding: 30px;
+  border: 1px solid #EBF6FB;
+  box-shadow: 2px 2px 24px 0px rgba(107, 118, 131, 0.1019607843);
+  border-radius: 5px;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+@media screen and (max-width: 993px) {
+  .login_register_in {
+    margin-bottom: 40px;
+    padding: 30px 10px;
+    gap: 60px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.login_register_in span {
+  position: absolute;
+  left: 33px;
+  bottom: 30px;
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #656565;
+}
+@media screen and (max-width: 993px) {
+  .login_register_in span {
+    margin-top: 30px;
+    position: static;
+  }
+}
+.login_register h6 {
+  margin-bottom: 5px;
+  font-family: "TT Norms", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.6px;
+  color: #01ABD3;
+}
+@media screen and (max-width: 993px) {
+  .login_register h6 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.login_register .placing_order_check {
+  margin: 5px 0 10px 0;
+}
+.login_register .placing_order_check p {
+  opacity: 50%;
+  font-family: "TT Norms", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15.4px;
+  color: #656565;
+  max-width: 304px;
+}
+@media screen and (max-width: 993px) {
+  .login_register .placing_order_check p {
+    font-size: 8px;
+    line-height: 8.8px;
+  }
+}
+.login_register .placing_order_check p a {
+  color: #01ABD3;
+}
+.login_register_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login_register_block_two {
+  position: relative;
+}
+.login_register_block_two::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  height: 100%;
+  width: 1px;
+  background: rgba(107, 118, 131, 0.2);
+}
+@media screen and (max-width: 993px) {
+  .login_register_block_two::before {
+    left: 0;
+    top: -30px;
+    width: 100%;
+    height: 1px;
+  }
+}
+.login_register form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login_register form button {
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-align: center;
+  color: #000000;
+  padding: 13px 33px;
+  border-radius: 10px;
+  background: #C2E6F3;
+}
+@media screen and (max-width: 993px) {
+  .login_register form button {
+    width: 140px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+.login_register form .btn_two {
+  width: 223px;
+}
+@media screen and (max-width: 993px) {
+  .login_register form .btn_two {
+    width: 100%;
+  }
+}
+.login_register .form_btns {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+@media screen and (max-width: 993px) {
+  .login_register .form_btns {
+    gap: 5px;
+    justify-content: space-between;
+  }
+}
+.login_register .form_btns a {
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #656565;
+}
+@media screen and (max-width: 993px) {
+  .login_register .form_btns a {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
 }/*# sourceMappingURL=style.css.map */
