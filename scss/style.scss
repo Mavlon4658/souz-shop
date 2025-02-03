@@ -4523,3 +4523,44 @@ textarea {
     }
 }
 // personal_data
+
+// delivery_address
+.delivery_address {
+    padding-top: 200px;
+
+    @include media(992) {
+        padding-top: 135px;
+    }
+
+    .main_title {
+        margin: 30px 0 60px 0;
+
+        @include media(993) {
+            margin: 30px 0;
+        }
+    }
+
+    .delivery_address_btn {
+        margin-top: 30px;
+        font-family: $font-tt-norms;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.2px;
+        text-align: center;
+        color: #000000;
+        border-radius: 10px;
+        background: #C2E6F3;
+        padding: 13px 54px;
+        height: 45px;
+
+        @include media(993) {
+            width: 100%;
+            margin-top: 20px;
+            height: 40px;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+}
+// delivery_address
