@@ -3809,6 +3809,14 @@ textarea {
   flex-direction: column;
   gap: 20px;
 }
+.recover_password_in form input {
+  max-width: 581px;
+}
+@media screen and (max-width: 993px) {
+  .recover_password_in form input {
+    max-width: 100%;
+  }
+}
 .recover_password_in h6 {
   font-family: "TT Norms", sans-serif;
   font-size: 20px;
@@ -3820,6 +3828,27 @@ textarea {
   .recover_password_in h6 {
     font-size: 12px;
     line-height: 14.4px;
+  }
+}
+.recover_password_in p {
+  font-family: "TT Norms", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.6px;
+  color: #000000;
+}
+@media screen and (max-width: 993px) {
+  .recover_password_in p {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+.recover_password_in .recover_password_text {
+  margin: 15px 0 30px 0;
+}
+@media screen and (max-width: 993px) {
+  .recover_password_in .recover_password_text {
+    margin: 10px 0 20px 0;
   }
 }
 .recover_password_in button {
@@ -3866,5 +3895,10 @@ textarea {
   .recover_password_in .form_btns a {
     font-size: 12px;
     line-height: 14.4px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .recover_password_in_end .form_btns {
+    align-items: start;
   }
 }/*# sourceMappingURL=style.css.map */
