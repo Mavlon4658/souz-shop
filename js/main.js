@@ -26,9 +26,19 @@ personal_account_modal_bg.addEventListener('click', () => {
     personal_account_edit.classList.remove('active');
     personal_account_modal_bg.classList.remove('active');
 })
-
-
 // personal_account_modal
+
+// delivery_address_modal
+// let delivery_address_modal = document.querySelector('.delivery_address_modal');
+// let delivery_address_modal_close = document.querySelector('.delivery_address_modal_close');
+// let delivery_address_btn = document.querySelector('.delivery_address_btn');
+
+// delivery_address_btn.addEventListener('click', () => {
+//     delivery_address_modal.classList.add('active');
+//     personal_account_modal_bg.classList.add('active');
+// })
+
+// delivery_address_modal
 
 // count
 document.addEventListener("DOMContentLoaded", function () {

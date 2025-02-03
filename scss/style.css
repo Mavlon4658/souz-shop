@@ -3663,12 +3663,6 @@ textarea {
   width: 100%;
   margin-top: 5px;
 }
-.personal_account_modal input::-moz-placeholder {
-  color: #000;
-}
-.personal_account_modal input::placeholder {
-  color: #000;
-}
 .personal_account_modal form {
   display: flex;
   flex-direction: column;
@@ -3702,6 +3696,14 @@ textarea {
   line-height: 19.2px;
   text-align: center;
   color: #000;
+  height: 45px;
+}
+@media screen and (max-width: 993px) {
+  .personal_account_modal button {
+    font-size: 12px;
+    line-height: 14.4px;
+    height: 40px;
+  }
 }
 .personal_account_modal .save_btn {
   border-radius: 10px;
@@ -3715,18 +3717,48 @@ textarea {
   }
 }
 
+.delivery_address_modal {
+  display: none;
+}
+.delivery_address_modal.active {
+  display: block;
+}
+
+.delivery_address_edit_modal {
+  display: none;
+}
+.delivery_address_edit_modal.active {
+  display: block;
+}
+
+.delivery_address_delete_modal {
+  display: none;
+}
+.delivery_address_delete_modal.active {
+  display: block;
+}
+.delivery_address_delete_modal p {
+  font-family: "TT Norms", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.6px;
+  -moz-column-rule: #000;
+       column-rule: #000;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 993px) {
+  .delivery_address_delete_modal p {
+    font-size: 12px;
+    line-height: 14.4px;
+    margin-bottom: 15px;
+  }
+}
+
 .personal_account_edit {
   display: none;
 }
 .personal_account_edit.active {
   display: block;
-}
-
-.personal_account_modal_bg {
-  display: none;
-}
-.personal_account_modal_bg.active {
-  display: flex;
 }
 
 .personal_account_modal_bg {
@@ -3738,6 +3770,10 @@ textarea {
   background: rgb(70, 84, 100);
   z-index: 4;
   opacity: 40%;
+  display: none;
+}
+.personal_account_modal_bg.active {
+  display: flex;
 }
 
 .personal_account_wrapper {
@@ -4283,6 +4319,85 @@ textarea {
 @media screen and (max-width: 993px) {
   .delivery_address .main_title {
     margin: 30px 0;
+  }
+}
+.delivery_address_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.delivery_address_list_block {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(107, 118, 131, 0.2);
+}
+.delivery_address_list h6 {
+  font-family: "TT Norms", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.6px;
+  color: #000;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 993px) {
+  .delivery_address_list h6 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.delivery_address_list p {
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #000;
+}
+.delivery_address_list button {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+}
+.delivery_address_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 993px) {
+  .delivery_address_bottom {
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.delivery_address_btns {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+@media screen and (max-width: 993px) {
+  .delivery_address_btns {
+    gap: 5px;
+  }
+}
+.delivery_address_btns svg {
+  width: 23px;
+  height: 23px;
+}
+@media screen and (max-width: 993px) {
+  .delivery_address_btns svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .delivery_address_btns button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 0.7px solid #656565;
+    border-radius: 10px;
   }
 }
 .delivery_address .delivery_address_btn {

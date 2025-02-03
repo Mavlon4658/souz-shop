@@ -3896,9 +3896,9 @@ textarea {
         width: 100%;
         margin-top: 5px;
 
-        &::placeholder {
-            color: #000;
-        }
+        // &::placeholder {
+        //     color: #000;
+        // }
     }
 
     form {
@@ -3936,6 +3936,13 @@ textarea {
         line-height: 19.2px;
         text-align: center;
         color: #000;
+        height: 45px;
+
+        @include media(993) {
+            font-size: 12px;
+            line-height: 14.4px;
+            height: 40px;
+        }
     }
 
     .save_btn {
@@ -3950,7 +3957,7 @@ textarea {
     }
 }
 
-.personal_account_edit {
+.delivery_address_modal {
     display: none;
 
     &.active {
@@ -3958,12 +3965,42 @@ textarea {
     }
 }
 
-
-.personal_account_modal_bg {
+.delivery_address_edit_modal {
     display: none;
 
     &.active {
-        display: flex;
+        display: block;
+    }
+}
+
+.delivery_address_delete_modal {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    p {
+        font-family: $font-tt-norms;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23.6px;
+        column-rule: #000;
+        margin-bottom: 20px;
+
+        @include media(993) {
+            font-size: 12px;
+            line-height: 14.4px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.personal_account_edit {
+    display: none;
+
+    &.active {
+        display: block;
     }
 }
 
@@ -3976,6 +4013,11 @@ textarea {
     background: rgba(70, 84, 100, 1);
     z-index: 4;
     opacity: 40%;
+    display: none;
+
+    &.active {
+        display: flex;
+    }
 }
 
 .personal_account_wrapper {
@@ -4537,6 +4579,91 @@ textarea {
 
         @include media(993) {
             margin: 30px 0;
+        }
+    }
+
+    &_list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &_block {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #6B768333;
+        }
+
+        h6 {
+            font-family: $font-tt-norms;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 23.6px;
+            color: #000;
+            margin-bottom: 8px;
+
+            @include media(993) {
+                margin-bottom: 15px;
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+
+        p {
+            font-family: $font-tt-norms;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.2px;
+            color: #000;
+        }
+
+        button {
+            width: 23px;
+            height: 23px;
+            flex-shrink: 0;
+        }
+    }
+
+    &_bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include media(993) {
+            align-items: start;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    &_btns {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+
+        @include media(993) {
+            gap: 5px;
+        }
+
+        svg {
+            width: 23px;
+            height: 23px;
+
+            @include media(993) {
+                width: 17px;
+                height: 17px;
+            }
+        }
+
+        button {
+
+            @include media(993) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 35px;
+                border: .7px solid #656565;
+                border-radius: 10px;
+            }
         }
     }
 
