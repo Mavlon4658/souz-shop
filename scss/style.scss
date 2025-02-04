@@ -3845,7 +3845,7 @@ textarea {
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
-    max-width: 462px;
+    width: 462px;
     height: auto;
     z-index: 5;
     border-radius: 5px;
@@ -4024,6 +4024,218 @@ textarea {
 
     &.active {
         display: block;
+    }
+}
+
+.agency_modal {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    &_user {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    textarea {
+        height: 172px;
+        font-family: $font-tt-norms;
+        font-weight: 500;
+        color: #656565;
+        border-radius: 10px;
+        border: 1px solid #C2E6F3;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 19.2px;
+
+        @include media(993) {
+            font-size: 12px;
+            line-height: 14.4px;
+            padding: 11px 15px;
+            height: 115px;
+        }
+    }
+
+    span {
+        font-family: $font-tt-norms;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14.4px;
+        color: #656565;
+    }
+
+    img {
+        width: 78px;
+        height: 78px;
+        background: #D9D9D9;
+        border-radius: 50%;
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    p {
+        margin: 10px 0;
+        font-family: $font-tt-norms;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.2px;
+        color: #000;
+
+        @include media(933) {
+            font-size: 12px;
+            line-height: 14.4px;
+        }
+    }
+}
+
+.discount_modal {
+    top: 34%;
+    display: none;
+    width: 722px;
+    left: auto;
+    right: 0;
+    transform: translate(0);
+
+    @include media(993) {
+        width: 100%;
+    }
+
+    .one_text {
+        @include media(993) {
+            margin: 10px 0;
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+
+    h6 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-family: $font-tt-norms;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23.6px;
+        color: #000;
+
+        @include media(933) {
+            font-size: 16px;
+            line-height: 16px;
+            margin-bottom: 10px;
+        }
+
+        span {
+            text-transform: uppercase;
+            font-family: $font-tt-norms;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.2px;
+            color: #000;
+            position: relative;
+            border-radius: 10px;
+            border: 2px solid #01ABD3;
+
+            @include media(993) {
+                font-size: 14px;
+                line-height: 16px;
+                padding: 5px 10px;
+            }
+        }
+    }
+
+    .list_title {
+        margin-top: 30px;
+
+        @include media(993) {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    .promo_code {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        @include media(993) {
+            margin-top: 10px;
+        }
+
+        span {
+            padding: 6px 8px;
+            margin-left: 8px;
+
+            @include media(993) {
+                margin-left: 0;
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
+
+        @include media(993) {
+            margin: 0;
+        }
+
+        li {
+            padding-left: 48px;
+            font-family: $font-tt-norms;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.2px;
+            color: #000;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: 1px;
+                width: 27px;
+                background: #01ABD3;
+
+                @include media(993) {
+                    width: 20px;
+                }
+            }
+
+            @include media(933) {
+                padding-left: 29px;
+                font-size: 12px;
+                line-height: 14.4px;
+            }
+        }
+    }
+
+    span {
+        font-family: $font-tt-norms;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 15.4px;
+        color: #656565;
+
+        @include media(993) {
+            font-size: 8px;
+            line-height: 8.8px;
+        }
     }
 }
 

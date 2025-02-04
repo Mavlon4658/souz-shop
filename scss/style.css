@@ -3610,7 +3610,7 @@ textarea {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: auto;
-  max-width: 462px;
+  width: 462px;
   height: auto;
   z-index: 5;
   border-radius: 5px;
@@ -3782,6 +3782,211 @@ textarea {
 }
 .personal_account_edit.active {
   display: block;
+}
+
+.agency_modal {
+  display: none;
+}
+.agency_modal.active {
+  display: block;
+}
+.agency_modal_user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.agency_modal textarea {
+  height: 172px;
+  font-family: "TT Norms", sans-serif;
+  font-weight: 500;
+  color: #656565;
+  border-radius: 10px;
+  border: 1px solid #C2E6F3;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 19.2px;
+}
+@media screen and (max-width: 993px) {
+  .agency_modal textarea {
+    font-size: 12px;
+    line-height: 14.4px;
+    padding: 11px 15px;
+    height: 115px;
+  }
+}
+.agency_modal span {
+  font-family: "TT Norms", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.4px;
+  color: #656565;
+}
+.agency_modal img {
+  width: 78px;
+  height: 78px;
+  background: #D9D9D9;
+  border-radius: 50%;
+  display: flex;
+  flex-shrink: 0;
+}
+.agency_modal p {
+  margin: 10px 0;
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #000;
+}
+@media screen and (max-width: 933px) {
+  .agency_modal p {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+
+.discount_modal {
+  top: 34%;
+  display: none;
+  width: 722px;
+  left: auto;
+  right: 0;
+  transform: translate(0);
+}
+@media screen and (max-width: 993px) {
+  .discount_modal {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 993px) {
+  .discount_modal .one_text {
+    margin: 10px 0;
+  }
+}
+.discount_modal.active {
+  display: block;
+}
+.discount_modal h6 {
+  margin-bottom: 10px;
+}
+.discount_modal p {
+  font-family: "TT Norms", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.6px;
+  color: #000;
+}
+@media screen and (max-width: 933px) {
+  .discount_modal p {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+}
+.discount_modal p span {
+  text-transform: uppercase;
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #000;
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid #01ABD3;
+}
+@media screen and (max-width: 993px) {
+  .discount_modal p span {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 5px 10px;
+  }
+}
+.discount_modal .list_title {
+  margin-top: 30px;
+}
+@media screen and (max-width: 993px) {
+  .discount_modal .list_title {
+    margin: 0 0 10px 0;
+  }
+}
+.discount_modal .promo_code {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (max-width: 993px) {
+  .discount_modal .promo_code {
+    margin-top: 10px;
+  }
+}
+.discount_modal .promo_code span {
+  padding: 6px 8px;
+  margin-left: 8px;
+}
+@media screen and (max-width: 993px) {
+  .discount_modal .promo_code span {
+    margin-left: 0;
+  }
+}
+.discount_modal .promo_code button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.discount_modal ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+@media screen and (max-width: 993px) {
+  .discount_modal ul {
+    margin: 0;
+  }
+}
+.discount_modal ul li {
+  padding-left: 48px;
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #000;
+  position: relative;
+}
+.discount_modal ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 1px;
+  width: 27px;
+  background: #01ABD3;
+}
+@media screen and (max-width: 993px) {
+  .discount_modal ul li::before {
+    width: 20px;
+  }
+}
+@media screen and (max-width: 933px) {
+  .discount_modal ul li {
+    padding-left: 29px;
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+.discount_modal span {
+  font-family: "TT Norms", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15.4px;
+  color: #656565;
+}
+@media screen and (max-width: 993px) {
+  .discount_modal span {
+    font-size: 8px;
+    line-height: 8.8px;
+  }
 }
 
 .personal_account_modal_bg {
