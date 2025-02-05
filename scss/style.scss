@@ -1764,6 +1764,7 @@ textarea {
 
 // footer
 .footer {
+    position: relative;
     background: #465464;
     padding: 60px 0;
 
@@ -1771,12 +1772,53 @@ textarea {
         padding: 30px 0 15px 0;
     }
 
+    &_logos {
+        display: flex;
+        align-items: center;
+        gap: 10px 19px;
+        flex-wrap: wrap;
+
+        @include media(993) {
+            gap: 9px 14px;
+        }
+
+        a {
+            flex-shrink: 0;
+        }
+    }
+
     &_left {
+        width: 100%;
+        flex: 1;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
 
         @include media(993) {
             flex-direction: column-reverse;
+        }
+
+        &_end {
+            display: flex;
+            align-items: end;
+            gap: 84px;
+        }
+
+        .footer_end_text {
+            font-family: $font-tt-norms;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14.4px;
+            color: #FFFFFF;
+
+            @include media(993) {
+                position: absolute;
+                left: 15px;
+                bottom: 15px;
+                font-size: 8px;
+                line-height: 8.8px;
+                opacity: .4;
+            }
         }
     }
 
@@ -1795,9 +1837,12 @@ textarea {
     }
 
     .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 36px 146px;
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        justify-content: space-between;
+        gap: 36px;
+        // gap: 146px;
 
         @include media(1200) {
             gap: 36px 50px;
@@ -1805,12 +1850,13 @@ textarea {
         }
 
         @include media(993) {
-            grid-template-columns: repeat(1, 1fr);
+            flex-direction: column;
+            // grid-template-columns: repeat(1, 1fr);
         }
     }
 
     &_logo {
-        width: 345px;
+        width: 193px;
         margin-top: 105px;
         display: flex;
         align-items: center;
@@ -1825,7 +1871,7 @@ textarea {
         }
 
         img {
-            width: 345px;
+            width: 193px;
 
             @include media(993) {
                 width: 150px;
@@ -1834,9 +1880,9 @@ textarea {
 
         span {
             font-family: $font-tt-norms;
-            font-size: 27px;
+            font-size: 15px;
             font-weight: 500;
-            line-height: 32.4px;
+            line-height: 18px;
             color: rgba(255, 255, 255, .40);
             text-transform: uppercase;
 
@@ -1844,6 +1890,31 @@ textarea {
                 font-size: 12px;
                 line-height: 14px;
             }
+        }
+    }
+
+    &_right {
+        max-width: 650px;
+        flex: 2;
+
+        @include media(1200) {
+            flex: 1;
+            width: 100%;
+        }
+
+        @include media(993) {
+            max-width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &_form {
+        @include media(993) {
+            display: flex;
+            flex-direction: column;
+            order: 3;
         }
     }
 
@@ -1942,6 +2013,11 @@ textarea {
         margin-top: 32px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+
+        @include media(993) {
+            order: 1;
+            margin-top: 0;
+        }
     }
 
     &_link {
@@ -1984,6 +2060,7 @@ textarea {
         @include media(993) {
             margin: 23px 0 38px 0;
             gap: 15px;
+            order: 2;
         }
 
         a {
@@ -2055,12 +2132,23 @@ textarea {
         align-items: end;
         grid-template-columns: repeat(2, 1fr);
         padding-right: 35px;
+        gap: 20px;
 
         @include media(993) {
+            position: static;
+            width: 50%;
+            margin-left: auto;
             padding-right: 0;
+            order: 4;
+            grid-template-columns: repeat(1, 1fr);
+            justify-content: end;
+            margin-top: 40px;
         }
 
-        span,
+        @include media(576){
+            width: 150px;
+        }
+
         li {
             font-family: $font-tt-norms;
             font-size: 12px;
@@ -2091,9 +2179,9 @@ textarea {
         @include media(993) {
             width: 24px;
             height: 24px;
-            left: 0;
+            left: 15px;
             right: auto;
-            bottom: 27px;
+            bottom: 42px;
         }
 
         svg {

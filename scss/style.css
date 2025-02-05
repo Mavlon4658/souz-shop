@@ -1719,6 +1719,7 @@ textarea {
 }
 
 .footer {
+  position: relative;
   background: #465464;
   padding: 60px 0;
 }
@@ -1727,13 +1728,52 @@ textarea {
     padding: 30px 0 15px 0;
   }
 }
+.footer_logos {
+  display: flex;
+  align-items: center;
+  gap: 10px 19px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 993px) {
+  .footer_logos {
+    gap: 9px 14px;
+  }
+}
+.footer_logos a {
+  flex-shrink: 0;
+}
 .footer_left {
+  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 @media screen and (max-width: 993px) {
   .footer_left {
     flex-direction: column-reverse;
+  }
+}
+.footer_left_end {
+  display: flex;
+  align-items: end;
+  gap: 84px;
+}
+.footer_left .footer_end_text {
+  font-family: "TT Norms", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.4px;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 993px) {
+  .footer_left .footer_end_text {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-size: 8px;
+    line-height: 8.8px;
+    opacity: 0.4;
   }
 }
 .footer h6 {
@@ -1751,9 +1791,9 @@ textarea {
   }
 }
 .footer .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 36px 146px;
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
 }
 @media screen and (max-width: 1200px) {
   .footer .container {
@@ -1763,11 +1803,11 @@ textarea {
 }
 @media screen and (max-width: 993px) {
   .footer .container {
-    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
   }
 }
 .footer_logo {
-  width: 345px;
+  width: 193px;
   margin-top: 105px;
   display: flex;
   align-items: center;
@@ -1783,7 +1823,7 @@ textarea {
   }
 }
 .footer_logo img {
-  width: 345px;
+  width: 193px;
 }
 @media screen and (max-width: 993px) {
   .footer_logo img {
@@ -1792,9 +1832,9 @@ textarea {
 }
 .footer_logo span {
   font-family: "TT Norms", sans-serif;
-  font-size: 27px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 32.4px;
+  line-height: 18px;
   color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
 }
@@ -1802,6 +1842,31 @@ textarea {
   .footer_logo span {
     font-size: 12px;
     line-height: 14px;
+  }
+}
+.footer_right {
+  max-width: 650px;
+  flex: 2;
+}
+@media screen and (max-width: 1200px) {
+  .footer_right {
+    flex: 1;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 993px) {
+  .footer_right {
+    max-width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 993px) {
+  .footer_form {
+    display: flex;
+    flex-direction: column;
+    order: 3;
   }
 }
 @media screen and (max-width: 993px) {
@@ -1900,6 +1965,12 @@ textarea {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+@media screen and (max-width: 993px) {
+  .footer_links {
+    order: 1;
+    margin-top: 0;
+  }
+}
 .footer_link ul {
   display: flex;
   flex-direction: column;
@@ -1938,6 +2009,7 @@ textarea {
   .footer_social {
     margin: 23px 0 38px 0;
     gap: 15px;
+    order: 2;
   }
 }
 .footer_social a svg path {
@@ -1976,13 +2048,25 @@ textarea {
   align-items: end;
   grid-template-columns: repeat(2, 1fr);
   padding-right: 35px;
+  gap: 20px;
 }
 @media screen and (max-width: 993px) {
   .footer_bottom {
+    position: static;
+    width: 50%;
+    margin-left: auto;
     padding-right: 0;
+    order: 4;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: end;
+    margin-top: 40px;
   }
 }
-.footer_bottom span,
+@media screen and (max-width: 576px) {
+  .footer_bottom {
+    width: 150px;
+  }
+}
 .footer_bottom li {
   font-family: "TT Norms", sans-serif;
   font-size: 12px;
@@ -1991,7 +2075,6 @@ textarea {
   color: #FFFFFF;
 }
 @media screen and (max-width: 993px) {
-  .footer_bottom span,
   .footer_bottom li {
     font-size: 8px;
     line-height: 8.8px;
@@ -2014,9 +2097,9 @@ textarea {
   .footer_up {
     width: 24px;
     height: 24px;
-    left: 0;
+    left: 15px;
     right: auto;
-    bottom: 27px;
+    bottom: 42px;
   }
 }
 @media screen and (max-width: 993px) {
