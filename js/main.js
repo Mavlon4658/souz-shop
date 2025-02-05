@@ -12,10 +12,12 @@ const selectOptions = document.getElementById("selectOptions");
 const selectedValue = document.getElementById("selectedValue");
 const selectIcon = document.getElementById("selectIcon");
 
-selectBox.addEventListener("click", () => {
-    selectOptions.style.display = selectOptions.style.display === "block" ? "none" : "block";
-    selectIcon.classList.toggle("rotate");
-});
+if (selectBox) {
+    selectBox.addEventListener("click", () => {
+        selectOptions.style.display = selectOptions.style.display === "block" ? "none" : "block";
+        selectIcon.classList.toggle("rotate");
+    });
+}
 
 document.querySelectorAll(".option").forEach(option => {
     option.addEventListener("click", (e) => {
@@ -26,9 +28,11 @@ document.querySelectorAll(".option").forEach(option => {
 });
 
 document.addEventListener("click", (e) => {
-    if (!selectBox.contains(e.target)) {
-        selectOptions.style.display = "none";
-        selectIcon.classList.remove("rotate");
+    if (selectBox) {
+        if (!selectBox.contains(e.target)) {
+            selectOptions.style.display = "none";
+            selectIcon.classList.remove("rotate");
+        }
     }
 });
 // custom-select
@@ -39,20 +43,26 @@ let personal_account_edit_close = document.querySelector('.personal_account_edit
 let personal_account_modal_bg = document.querySelector('.personal_account_modal_bg');
 let personal_data_btn = document.querySelector('.personal_data_btn');
 
-personal_data_btn.addEventListener('click', () => {
-    personal_account_edit.classList.add('active');
-    personal_account_modal_bg.classList.add('active');
-})
+if (personal_data_btn) {
+    personal_data_btn.addEventListener('click', () => {
+        personal_account_edit.classList.add('active');
+        personal_account_modal_bg.classList.add('active');
+    })
+}
 
-personal_account_edit_close.addEventListener('click', () => {
-    personal_account_edit.classList.remove('active');
-    personal_account_modal_bg.classList.remove('active');
-})
+if (personal_account_edit_close) {
+    personal_account_edit_close.addEventListener('click', () => {
+        personal_account_edit.classList.remove('active');
+        personal_account_modal_bg.classList.remove('active');
+    })
+}
 
-personal_account_modal_bg.addEventListener('click', () => {
-    personal_account_edit.classList.remove('active');
-    personal_account_modal_bg.classList.remove('active');
-})
+if (personal_account_modal_bg) {
+    personal_account_modal_bg.addEventListener('click', () => {
+        personal_account_edit.classList.remove('active');
+        personal_account_modal_bg.classList.remove('active');
+    })
+}
 // personal_account_modal
 
 // delivery_address_modal
