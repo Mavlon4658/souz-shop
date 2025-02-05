@@ -45,35 +45,101 @@ let personal_data_btn = document.querySelector('.personal_data_btn');
 
 if (personal_data_btn) {
     personal_data_btn.addEventListener('click', () => {
-        personal_account_edit.classList.add('active');
-        personal_account_modal_bg.classList.add('active');
+        if (personal_account_edit) {
+            personal_account_edit.classList.add('active');
+        }
+        if (personal_account_modal_bg) {
+            personal_account_modal_bg.classList.add('active');
+        }
     })
 }
 
 if (personal_account_edit_close) {
     personal_account_edit_close.addEventListener('click', () => {
-        personal_account_edit.classList.remove('active');
-        personal_account_modal_bg.classList.remove('active');
-    })
-}
-
-if (personal_account_modal_bg) {
-    personal_account_modal_bg.addEventListener('click', () => {
-        personal_account_edit.classList.remove('active');
-        personal_account_modal_bg.classList.remove('active');
+        if (personal_account_edit) {
+            personal_account_edit.classList.remove('active');
+        }
+        if (personal_account_modal_bg) {
+            personal_account_modal_bg.classList.remove('active');
+        }
     })
 }
 // personal_account_modal
 
 // delivery_address_modal
-// let delivery_address_modal = document.querySelector('.delivery_address_modal');
-// let delivery_address_modal_close = document.querySelector('.delivery_address_modal_close');
-// let delivery_address_btn = document.querySelector('.delivery_address_btn');
+let delivery_address_modal = document.querySelector('.delivery_address_modal');
+let delivery_address_modal_close = document.querySelector('.delivery_address_close');
+let delivery_address_btn = document.querySelector('.delivery_address_btn');
 
-// delivery_address_btn.addEventListener('click', () => {
-//     delivery_address_modal.classList.add('active');
-//     personal_account_modal_bg.classList.add('active');
-// })
+if (delivery_address_modal) {
+    delivery_address_btn.addEventListener('click', () => {
+        delivery_address_modal.classList.add('active');
+        personal_account_modal_bg.classList.add('active');
+    })
+    
+    delivery_address_modal_close.onclick = () => {
+        delivery_address_modal.classList.remove('active');
+        personal_account_modal_bg.classList.remove('active');
+    }
+}
+
+const addressEdit = document.querySelector('.delivery_address_edit_modal');
+const delivery_address_edit_close = document.querySelector('.delivery_address_edit_close');
+const address_edit_btn = document.querySelectorAll('.address_edit_btn');
+
+if (address_edit_btn.length) {
+    address_edit_btn.forEach(el => {
+        el.onclick = e => {
+            e.preventDefault();
+            addressEdit.classList.add('active');
+            personal_account_modal_bg.classList.add('active');
+        }
+    })
+    
+    delivery_address_edit_close.onclick = () => {
+        addressEdit.classList.remove('active');
+        personal_account_modal_bg.classList.remove('active');
+    }
+}
+
+const delivery_address_delete_modal = document.querySelector('.delivery_address_delete_modal');
+const delivery_address_delete_close = document.querySelector('.delivery_address_delete_close');
+const address_delete_btn = document.querySelectorAll('.address_delete_btn');
+
+if (address_delete_btn.length) {
+    address_delete_btn.forEach(el => {
+        el.onclick = e => {
+            e.preventDefault();
+            delivery_address_delete_modal.classList.add('active');
+            personal_account_modal_bg.classList.add('active');
+        }
+    })
+
+    delivery_address_delete_close.onclick = () => {
+        delivery_address_delete_modal.classList.remove('active');
+        personal_account_modal_bg.classList.remove('active');
+    }
+}
+
+if (personal_account_modal_bg) {
+    personal_account_modal_bg.addEventListener('click', () => {
+        if (personal_account_edit) {
+            personal_account_edit.classList.remove('active');
+        }
+        if (personal_account_modal_bg) {
+            personal_account_modal_bg.classList.remove('active');
+        }
+        if (delivery_address_modal) {
+            delivery_address_modal.classList.remove('active');
+        }
+        if (addressEdit) {
+            addressEdit.classList.remove('active');
+        }
+        if (delivery_address_modal) {
+            delivery_address_delete_modal.classList.remove('active');
+        }
+    })
+}
 
 // delivery_address_modal
 
