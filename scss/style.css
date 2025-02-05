@@ -420,8 +420,10 @@ textarea {
   z-index: 4;
   background: #FFF;
 }
-.header.other .header__bottom {
-  display: none;
+@media screen and (min-width: 1070px) {
+  .header.other .header__bottom {
+    display: none;
+  }
 }
 @media screen and (max-width: 1070px) {
   .header.active {
@@ -557,6 +559,44 @@ textarea {
   .header__right a .number {
     display: none;
   }
+}
+.header__right .header__search {
+  position: relative;
+  transform: translate(0);
+  left: 0;
+  top: 0;
+}
+@media screen and (max-width: 1320px) {
+  .header__right .header__search {
+    display: none;
+  }
+}
+.header__right .header__search_inp input {
+  width: 240px;
+}
+.header__right .phone-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-left: 10px;
+}
+@media screen and (max-width: 1070px) {
+  .header__right .phone-link {
+    display: none;
+  }
+}
+.header__right .phone-link__number {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  color: black;
+}
+.header__right .phone-link__val {
+  color: #6B7683;
+  font-size: 12.3px;
+  font-weight: 500;
+  line-height: 110%;
 }
 .header__bottom {
   transition: 0.3s ease all;

@@ -115,31 +115,38 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // heart
 
-const headerSearchInp = document.querySelector('.header__search_inp input');
-const headerList = document.querySelector('.header__search_list');
-const headerSearchBtn = document.querySelectorAll('.header__search_inp button')[0];
-const headerClrBtn = document.querySelector('.header__search_inp .clear');
-const headerBottomLeft = document.querySelector('.header__bottom_left');
+const headSearchEl = document.querySelectorAll('.header__search');
 
-if (headerSearchInp) {
-    headerSearchInp.oninput = e => {
-        if (e.target.value) {
-            headerList.classList.add('active');
-        } else {
-            headerList.classList.remove('active');
+if (headSearchEl.length) {
+    headSearchEl.forEach(el => {
+        const headerSearchInp = el.querySelector('.header__search_inp input');
+        const headerList = el.querySelector('.header__search_list');
+        const headerSearchBtn = el.querySelectorAll('.header__search_inp button')[0];
+        const headerClrBtn = el.querySelector('.header__search_inp .clear');
+        const headerBottomLeft = el.querySelector('.header__bottom_left');
+        
+        if (headerSearchInp) {
+            headerSearchInp.oninput = e => {
+                if (e.target.value) {
+                    headerList.classList.add('active');
+                } else {
+                    headerList.classList.remove('active');
+                }
+            }
+        
+            headerClrBtn.onclick = () => {
+                headerList.classList.remove('active');
+                headerSearchInp.value = ''
+                headerBottomLeft.classList.remove('active');
+            }
+        
+            headerSearchBtn.onclick = () => {
+                headerBottomLeft.classList.add('active');
+            }
         }
-    }
-
-    headerClrBtn.onclick = () => {
-        headerList.classList.remove('active');
-        headerSearchInp.value = ''
-        headerBottomLeft.classList.remove('active');
-    }
-
-    headerSearchBtn.onclick = () => {
-        headerBottomLeft.classList.add('active');
-    }
+    })
 }
+
 
 const headBottom = document.querySelector('.header__bottom');
 let scrY1 = window.scrollY;
@@ -154,8 +161,10 @@ window.addEventListener('scroll', function (e) {
         if (this.window.scrollY > 150) {
             headBottom.classList.add('hide');
 
-            if (headerList) {
-                headerList.classList.remove('active');
+            if (headSearchEl.length) {
+                headSearchEl.forEach(el => {
+                    el.querySelector('.header__search_list').classList.remove('active');
+                })
             }
         }
     }
