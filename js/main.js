@@ -182,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // heart
 
 const headSearchEl = document.querySelectorAll('.header__search');
+const headerBottomLeft = document.querySelector('.header__bottom_left');
 
 if (headSearchEl.length) {
     headSearchEl.forEach(el => {
@@ -189,7 +190,6 @@ if (headSearchEl.length) {
         const headerList = el.querySelector('.header__search_list');
         const headerSearchBtn = el.querySelectorAll('.header__search_inp button')[0];
         const headerClrBtn = el.querySelector('.header__search_inp .clear');
-        const headerBottomLeft = el.querySelector('.header__bottom_left');
         
         if (headerSearchInp) {
             headerSearchInp.oninput = e => {
@@ -207,7 +207,9 @@ if (headSearchEl.length) {
             }
         
             headerSearchBtn.onclick = () => {
-                headerBottomLeft.classList.add('active');
+                if (headerBottomLeft) {
+                    headerBottomLeft.classList.add('active');
+                }
             }
         }
     })
@@ -304,8 +306,12 @@ function swiperCard() {
             })
         }
     } else if (init) {
-        anonsSwp.destroy();
-        collectionSwp.destroy();
+        if (document.querySelector('.anons__swp .swiper')) {
+            anonsSwp.destroy();
+        }
+        if (document.querySelector('.collection-swp .swiper')) {
+            collectionSwp.destroy();
+        }
         init = false;
     }
 }
