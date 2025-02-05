@@ -6,6 +6,33 @@ const bodyVisible = () => {
     document.querySelector('body').style.overflow = 'visible';
 }
 
+// custom-select
+const selectBox = document.getElementById("selectBox");
+const selectOptions = document.getElementById("selectOptions");
+const selectedValue = document.getElementById("selectedValue");
+const selectIcon = document.getElementById("selectIcon");
+
+selectBox.addEventListener("click", () => {
+    selectOptions.style.display = selectOptions.style.display === "block" ? "none" : "block";
+    selectIcon.classList.toggle("rotate");
+});
+
+document.querySelectorAll(".option").forEach(option => {
+    option.addEventListener("click", (e) => {
+        selectedValue.textContent = e.target.getAttribute("data-value");
+        selectOptions.style.display = "none";
+        selectIcon.classList.remove("rotate");
+    });
+});
+
+document.addEventListener("click", (e) => {
+    if (!selectBox.contains(e.target)) {
+        selectOptions.style.display = "none";
+        selectIcon.classList.remove("rotate");
+    }
+});
+// custom-select
+
 // personal_account_modal
 let personal_account_edit = document.querySelector('.personal_account_edit');
 let personal_account_edit_close = document.querySelector('.personal_account_edit_close');
