@@ -5264,6 +5264,91 @@ textarea {
         padding-top: 135px;
     }
 
+    .custom-select {
+        position: relative;
+        width: 183px;
+        border: 1px solid #65656580;
+        border-radius: 2px;
+        padding: 4px 10px;
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        align-items: center;
+
+        @include media(993) {
+            width: 150px;
+            padding: 0;
+            border: 1px solid transparent;
+        }
+
+        span {
+            font-family: $font-tt-norms;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16.8px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+            @include media(993) {
+                font-size: 12px;
+                line-height: 14.4px;
+            }
+        }
+
+        .select-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            display: none;
+            z-index: 10;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                margin: auto;
+                width: calc(100% - 10px);
+                height: 1px;
+                background: #656565;
+                opacity: 50%;
+            }
+
+            @include media(993) {
+                border: 1px solid transparent;
+            }
+        }
+        .select-options div {
+            font-family: $font-tt-norms;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16.8px;
+            text-align: left;
+            color: #65656580;
+            cursor: pointer;
+            padding: 4px 10px;
+        }
+        .select-options div:hover {
+            background: #f0f0f0;
+        }
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg);
+            transition: transform 0.3s ease;
+        }
+        .rotate {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
     &_links_wrapper {
         margin: 60px 0;
 
@@ -5471,83 +5556,23 @@ textarea {
                 }
             }
         }
-
-        .custom-select {
-            position: relative;
-            width: 183px;
-            border: 1px solid #65656580;
-            border-radius: 2px;
-            padding: 4px 10px;
-            cursor: pointer;
-            user-select: none;
-            display: flex;
-            align-items: center;
-
-            @include media(993) {
-                width: 150px;
-                padding: 0;
-                border: 1px solid transparent;
-            }
-
-            span {
-                font-family: $font-tt-norms;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 16.8px;
-                text-align: left;
-                text-underline-position: from-font;
-                text-decoration-skip-ink: none;
-
-                @include media(993) {
-                    font-size: 12px;
-                    line-height: 14.4px;
-                }
-            }
-        }
-        .select-options {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: #fff;
-            border: 1px solid #ccc;
-            border-top: none;
-            display: none;
-            z-index: 10;
-
-            @include media(993) {
-                border: 1px solid transparent;
-            }
-        }
-        .select-options div {
-            font-family: $font-tt-norms;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 16.8px;
-            text-align: left;
-            color: #65656580;
-            cursor: pointer;
-            padding: 4px 10px;
-        }
-        .select-options div:hover {
-            background: #f0f0f0;
-        }
-        .icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%) rotate(0deg);
-            transition: transform 0.3s ease;
-        }
-        .rotate {
-            transform: translateY(-50%) rotate(180deg);
-        }
     }
 
     &_cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 26px 30px;
+        margin-bottom: 68px;
+
+        @include media(993) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include media(768) {
+            margin-bottom: 40px;
+            gap: 20px 15px;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &_img {
@@ -5566,15 +5591,36 @@ textarea {
             line-height: 19.2px;
             color: #465464;
             background: #EBF6FB;
+            border: 1px solid #465464;
+
+            @include media(768) {
+                left: 8px;
+                right: auto;
+                top: 8px;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+
+        .xit_product {
+            color: #01ABD3;
+            border: 1px solid #01ABD3;
         }
 
         img {
+            width: 100%;
             border-radius: 5px;
         }
     }
 
     &_card_block {
         position: relative;
+
+        @include media(768) {
+            &:hover {
+                display: none;
+            }
+        }
 
         &:hover {
             .catalog_card {
@@ -5588,18 +5634,32 @@ textarea {
                 z-index: 3;
                 background: white;
 
+                @include media(993) {
+                    padding: 10px;
+                }
+
+                @include media(768) {
+                    position: static;
+                    transform: scale(auto);
+                }
+
                 .heart_icon {
                     display: block;
                 }
 
                 .catalog_card_btn {
                     display: block;
+
+                    @include media(768) {
+                        display: flex;
+                    }
                 }
             }
         }
     }
 
     &_card {
+        position: relative;
 
         h6 {
             margin-top: 15px;
@@ -5608,15 +5668,12 @@ textarea {
             font-weight: 500;
             line-height: 19.2px;
             color: #000;
-        }
 
-        span {
-            font-family: $font-tt-norms;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 15.4px;
-            color: #6B7683;
-            margin: 2px 0;
+            @include media(768) {
+                margin-top: 10px;
+                font-size: 12px;
+                line-height: 14.4px;
+            }
         }
 
         h5 {
@@ -5626,10 +5683,35 @@ textarea {
             line-height: 24px;
             letter-spacing: -0.05em;
             color: #000;
+
+            @include media(768) {
+                font-size: 16px;
+                line-height: 19.2px;
+            }
         }
 
         .catalog_text {
             position: relative;
+
+            @include media(768) {
+                position: static;
+            }
+
+
+            span {
+                font-family: $font-tt-norms;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 15.4px;
+                color: #6B7683;
+                margin: 2px 0;
+
+                @include media(768) {
+                    margin: 0;
+                    font-size: 8px;
+                    line-height: 8.8px;
+                }
+            }
         }
 
         .heart_icon {
@@ -5637,6 +5719,17 @@ textarea {
             top: 0;
             right: 0;
             display: none;
+
+            path {
+                stroke: #FFFFFF;
+            }
+
+            @include media(768) {
+                top: 8px;
+                right: 8px;
+                z-index: 3;
+                display: flex;
+            }
 
             svg {
                 width: 19px;
@@ -5646,18 +5739,110 @@ textarea {
 
         .catalog_card_btn {
             display: none;
+            align-items: center;
+            justify-content: center;
             margin-top: 45px;
-            font-family: $font-tt-norms;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 19.2px;
-            text-align: center;
             width: 100%;
             padding: 11px;
             border-radius: 10px;
             height: 41px;
             background: #C2E6F3;
+
+            @include media(768) {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin-top: 0;
+                width: 30px;
+                height: 30px;
+                flex-shrink: 0;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+            }
+
+            svg {
+                display: none;
+
+                @include media(768) {
+                    display: block;
+                }
+            }
+
+            span {
+                margin: 0;
+                font-family: $font-tt-norms;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19.2px;
+                text-align: center;
+                color: #000;
+
+                @include media(768) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &_pagination {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 84px;
+
+        @include media(768) {
+            margin-bottom: 40px;
+            gap: 15px;
+        }
+
+        .custom-select {
+            width: 197px;
+            position: absolute;
+            right: 0;
+
+            @include media(993) {
+                width: 170px;
+            }
+
+            @include media(768) {
+                display: none;
+            }
+        }
+
+        a {
+            font-family: $font-tt-norms;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.2px;
+            color: #656565;
+            transition: .2s ease;
+
+            @include media(768) {
+                font-size: 12px;
+                line-height: 14.4px;
+            }
+
+            &:hover {
+                color: #01ABD3;
+            }
+
+            svg {
+                path {
+                    transition: .2s ease;
+                }
+            }
         }
     }
 }
 // catalog
+
+// order-history
+.order_history {
+
+}
+// order-history
