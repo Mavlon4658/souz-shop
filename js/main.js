@@ -45,35 +45,101 @@ let personal_data_btn = document.querySelector('.personal_data_btn');
 
 if (personal_data_btn) {
     personal_data_btn.addEventListener('click', () => {
-        personal_account_edit.classList.add('active');
-        personal_account_modal_bg.classList.add('active');
+        if (personal_account_edit) {
+            personal_account_edit.classList.add('active');
+        }
+        if (personal_account_modal_bg) {
+            personal_account_modal_bg.classList.add('active');
+        }
     })
 }
 
 if (personal_account_edit_close) {
     personal_account_edit_close.addEventListener('click', () => {
-        personal_account_edit.classList.remove('active');
-        personal_account_modal_bg.classList.remove('active');
-    })
-}
-
-if (personal_account_modal_bg) {
-    personal_account_modal_bg.addEventListener('click', () => {
-        personal_account_edit.classList.remove('active');
-        personal_account_modal_bg.classList.remove('active');
+        if (personal_account_edit) {
+            personal_account_edit.classList.remove('active');
+        }
+        if (personal_account_modal_bg) {
+            personal_account_modal_bg.classList.remove('active');
+        }
     })
 }
 // personal_account_modal
 
 // delivery_address_modal
-// let delivery_address_modal = document.querySelector('.delivery_address_modal');
-// let delivery_address_modal_close = document.querySelector('.delivery_address_modal_close');
-// let delivery_address_btn = document.querySelector('.delivery_address_btn');
+let delivery_address_modal = document.querySelector('.delivery_address_modal');
+let delivery_address_modal_close = document.querySelector('.delivery_address_close');
+let delivery_address_btn = document.querySelector('.delivery_address_btn');
 
-// delivery_address_btn.addEventListener('click', () => {
-//     delivery_address_modal.classList.add('active');
-//     personal_account_modal_bg.classList.add('active');
-// })
+if (delivery_address_modal) {
+    delivery_address_btn.addEventListener('click', () => {
+        delivery_address_modal.classList.add('active');
+        personal_account_modal_bg.classList.add('active');
+    })
+    
+    delivery_address_modal_close.onclick = () => {
+        delivery_address_modal.classList.remove('active');
+        personal_account_modal_bg.classList.remove('active');
+    }
+}
+
+const addressEdit = document.querySelector('.delivery_address_edit_modal');
+const delivery_address_edit_close = document.querySelector('.delivery_address_edit_close');
+const address_edit_btn = document.querySelectorAll('.address_edit_btn');
+
+if (address_edit_btn.length) {
+    address_edit_btn.forEach(el => {
+        el.onclick = e => {
+            e.preventDefault();
+            addressEdit.classList.add('active');
+            personal_account_modal_bg.classList.add('active');
+        }
+    })
+    
+    delivery_address_edit_close.onclick = () => {
+        addressEdit.classList.remove('active');
+        personal_account_modal_bg.classList.remove('active');
+    }
+}
+
+const delivery_address_delete_modal = document.querySelector('.delivery_address_delete_modal');
+const delivery_address_delete_close = document.querySelector('.delivery_address_delete_close');
+const address_delete_btn = document.querySelectorAll('.address_delete_btn');
+
+if (address_delete_btn.length) {
+    address_delete_btn.forEach(el => {
+        el.onclick = e => {
+            e.preventDefault();
+            delivery_address_delete_modal.classList.add('active');
+            personal_account_modal_bg.classList.add('active');
+        }
+    })
+
+    delivery_address_delete_close.onclick = () => {
+        delivery_address_delete_modal.classList.remove('active');
+        personal_account_modal_bg.classList.remove('active');
+    }
+}
+
+if (personal_account_modal_bg) {
+    personal_account_modal_bg.addEventListener('click', () => {
+        if (personal_account_edit) {
+            personal_account_edit.classList.remove('active');
+        }
+        if (personal_account_modal_bg) {
+            personal_account_modal_bg.classList.remove('active');
+        }
+        if (delivery_address_modal) {
+            delivery_address_modal.classList.remove('active');
+        }
+        if (addressEdit) {
+            addressEdit.classList.remove('active');
+        }
+        if (delivery_address_modal) {
+            delivery_address_delete_modal.classList.remove('active');
+        }
+    })
+}
 
 // delivery_address_modal
 
@@ -115,31 +181,38 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // heart
 
-const headerSearchInp = document.querySelector('.header__search_inp input');
-const headerList = document.querySelector('.header__search_list');
-const headerSearchBtn = document.querySelectorAll('.header__search_inp button')[0];
-const headerClrBtn = document.querySelector('.header__search_inp .clear');
-const headerBottomLeft = document.querySelector('.header__bottom_left');
+const headSearchEl = document.querySelectorAll('.header__search');
 
-if (headerSearchInp) {
-    headerSearchInp.oninput = e => {
-        if (e.target.value) {
-            headerList.classList.add('active');
-        } else {
-            headerList.classList.remove('active');
+if (headSearchEl.length) {
+    headSearchEl.forEach(el => {
+        const headerSearchInp = el.querySelector('.header__search_inp input');
+        const headerList = el.querySelector('.header__search_list');
+        const headerSearchBtn = el.querySelectorAll('.header__search_inp button')[0];
+        const headerClrBtn = el.querySelector('.header__search_inp .clear');
+        const headerBottomLeft = el.querySelector('.header__bottom_left');
+        
+        if (headerSearchInp) {
+            headerSearchInp.oninput = e => {
+                if (e.target.value) {
+                    headerList.classList.add('active');
+                } else {
+                    headerList.classList.remove('active');
+                }
+            }
+        
+            headerClrBtn.onclick = () => {
+                headerList.classList.remove('active');
+                headerSearchInp.value = ''
+                headerBottomLeft.classList.remove('active');
+            }
+        
+            headerSearchBtn.onclick = () => {
+                headerBottomLeft.classList.add('active');
+            }
         }
-    }
-
-    headerClrBtn.onclick = () => {
-        headerList.classList.remove('active');
-        headerSearchInp.value = ''
-        headerBottomLeft.classList.remove('active');
-    }
-
-    headerSearchBtn.onclick = () => {
-        headerBottomLeft.classList.add('active');
-    }
+    })
 }
+
 
 const headBottom = document.querySelector('.header__bottom');
 let scrY1 = window.scrollY;
@@ -154,8 +227,10 @@ window.addEventListener('scroll', function (e) {
         if (this.window.scrollY > 150) {
             headBottom.classList.add('hide');
 
-            if (headerList) {
-                headerList.classList.remove('active');
+            if (headSearchEl.length) {
+                headSearchEl.forEach(el => {
+                    el.querySelector('.header__search_list').classList.remove('active');
+                })
             }
         }
     }
@@ -322,4 +397,51 @@ if (sampleContentItem.length) {
         })
         document.querySelector('.sample-custom__content-body .more-btn').classList.add('hidden');
     }
+}
+
+const rangesEl = document.querySelectorAll(".form_range");
+
+if (rangesEl.length) {
+  rangesEl.forEach(range => {
+    let rangeS = range.querySelectorAll("input[type=range]"),
+      numberS = range.querySelectorAll("input.val"),
+      line = range.querySelector('.line'),
+      min = parseFloat(rangeS[0].min),
+      max = parseFloat(rangeS[0].max);
+
+    const handleRange = () => {
+      let slide1 = parseFloat(rangeS[0].value),
+        slide2 = parseFloat(rangeS[1].value);
+
+      if (slide1 > slide2) [slide1, slide2] = [slide2, slide1];
+
+      numberS[0].value = slide1;
+      numberS[1].value = slide2;
+
+      line.style.left = 100 * slide1 / max + '%';
+      line.style.width = 100 * (slide2 - slide1) / max + '%';
+    };
+
+    const handleNumber = () => {
+      let num1 = parseFloat(numberS[0].value),
+        num2 = parseFloat(numberS[1].value);
+
+      if (num1 > num2) [num1, num2] = [num2, num1];
+
+      rangeS[0].value = num1;
+      rangeS[1].value = num2;
+
+      handleRange();
+    };
+
+    handleRange();
+
+    rangeS.forEach(el => {
+      el.oninput = handleRange;
+    });
+
+    numberS.forEach(el => {
+      el.oninput = handleNumber;
+    });
+  });
 }
