@@ -6,6 +6,67 @@ const bodyVisible = () => {
     document.querySelector('body').style.overflow = 'visible';
 }
 
+// custom-select
+const selectBox = document.getElementById("selectBox");
+const selectOptions = document.getElementById("selectOptions");
+const selectedValue = document.getElementById("selectedValue");
+const selectIcon = document.getElementById("selectIcon");
+
+selectBox.addEventListener("click", () => {
+    selectOptions.style.display = selectOptions.style.display === "block" ? "none" : "block";
+    selectIcon.classList.toggle("rotate");
+});
+
+document.querySelectorAll(".option").forEach(option => {
+    option.addEventListener("click", (e) => {
+        selectedValue.textContent = e.target.getAttribute("data-value");
+        selectOptions.style.display = "none";
+        selectIcon.classList.remove("rotate");
+    });
+});
+
+document.addEventListener("click", (e) => {
+    if (!selectBox.contains(e.target)) {
+        selectOptions.style.display = "none";
+        selectIcon.classList.remove("rotate");
+    }
+});
+// custom-select
+
+// personal_account_modal
+let personal_account_edit = document.querySelector('.personal_account_edit');
+let personal_account_edit_close = document.querySelector('.personal_account_edit_close');
+let personal_account_modal_bg = document.querySelector('.personal_account_modal_bg');
+let personal_data_btn = document.querySelector('.personal_data_btn');
+
+personal_data_btn.addEventListener('click', () => {
+    personal_account_edit.classList.add('active');
+    personal_account_modal_bg.classList.add('active');
+})
+
+personal_account_edit_close.addEventListener('click', () => {
+    personal_account_edit.classList.remove('active');
+    personal_account_modal_bg.classList.remove('active');
+})
+
+personal_account_modal_bg.addEventListener('click', () => {
+    personal_account_edit.classList.remove('active');
+    personal_account_modal_bg.classList.remove('active');
+})
+// personal_account_modal
+
+// delivery_address_modal
+// let delivery_address_modal = document.querySelector('.delivery_address_modal');
+// let delivery_address_modal_close = document.querySelector('.delivery_address_modal_close');
+// let delivery_address_btn = document.querySelector('.delivery_address_btn');
+
+// delivery_address_btn.addEventListener('click', () => {
+//     delivery_address_modal.classList.add('active');
+//     personal_account_modal_bg.classList.add('active');
+// })
+
+// delivery_address_modal
+
 // count
 document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll(".product_list_count");
