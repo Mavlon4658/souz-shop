@@ -1460,6 +1460,13 @@ textarea {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.return_exchange_block_left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+}
 .return_exchange_block {
   display: flex;
   flex-direction: column;
@@ -1701,26 +1708,37 @@ textarea {
   }
 }
 .contact_block a,
-.contact_block address,
 .contact_block span {
-  display: flex;
-  align-items: start;
-  gap: 15px;
   font-size: 16px;
   font-weight: 500;
   line-height: 19.2px;
   color: #656565;
+  gap: 15px;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 993px) {
   .contact_block a,
-  .contact_block address,
   .contact_block span {
     font-size: 12px;
     line-height: 14px;
   }
 }
 .contact_block address {
+  gap: 15px;
   min-height: 57px;
+  display: flex;
+  align-items: start;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #656565;
+}
+@media screen and (max-width: 993px) {
+  .contact_block address {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 .contact_block svg {
   flex-shrink: 0;
