@@ -196,6 +196,262 @@
 
         <main>
 
+          <!-- Filter modal -->
+          <section class="main-modal filter-modal">
+            <div class="main-modal__bg"></div>
+            <div class="main-modal__content">
+                <h2>Фильтры</h2>
+                <button class="main-modal__close">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.00078 8.40078L2.10078 13.3008C1.91745 13.4841 1.68411 13.5758 1.40078 13.5758C1.11745 13.5758 0.884114 13.4841 0.700781 13.3008C0.517448 13.1174 0.425781 12.8841 0.425781 12.6008C0.425781 12.3174 0.517448 12.0841 0.700781 11.9008L5.60078 7.00078L0.700781 2.10078C0.517448 1.91745 0.425781 1.68411 0.425781 1.40078C0.425781 1.11745 0.517448 0.884114 0.700781 0.700781C0.884114 0.517448 1.11745 0.425781 1.40078 0.425781C1.68411 0.425781 1.91745 0.517448 2.10078 0.700781L7.00078 5.60078L11.9008 0.700781C12.0841 0.517448 12.3174 0.425781 12.6008 0.425781C12.8841 0.425781 13.1174 0.517448 13.3008 0.700781C13.4841 0.884114 13.5758 1.11745 13.5758 1.40078C13.5758 1.68411 13.4841 1.91745 13.3008 2.10078L8.40078 7.00078L13.3008 11.9008C13.4841 12.0841 13.5758 12.3174 13.5758 12.6008C13.5758 12.8841 13.4841 13.1174 13.3008 13.3008C13.1174 13.4841 12.8841 13.5758 12.6008 13.5758C12.3174 13.5758 12.0841 13.4841 11.9008 13.3008L7.00078 8.40078Z" fill="black"/>
+                    </svg>
+                </button>
+                <div class="form-radio__wrap">
+                    <div class="form-radio">
+                        <input type="checkbox" name="" id="">
+                        <span class="form-radio__bg"></span>
+                        <span class="form-radio__dot"></span>
+                    </div>
+                    <p>В наличии</p>
+                </div>
+                <div class="main-modal__content-item">
+                  <h4>Цена за п.м., ₽ </h4>
+                  <div class="form_range">
+                    <div class="form_range__val">
+                      <div class="form_range__val_item">
+                        <span>От:</span>
+                        <input class="val" type="number" value="0" min="0" max="4170" step="1">
+                      </div>
+                      <div class="form_range__val_item">
+                        <span>До:</span>
+                        <input class="val" type="number" value="0" min="0" max="4170" step="1">
+                      </div>
+                    </div>
+                    <div class="form_range__inp">
+                      <div class="line"></div>
+                      <input value="0" min="0" max="4170" step="1" type="range" />
+                      <input value="4170" min="0" max="4170" step="1" type="range" />
+                    </div>
+                  </div>
+                </div>
+                <div class="main-modal__content-item">
+                  <h4>Тип ткани:</h4>
+                  <div class="main-modal__content-item__list">
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Букле</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Искусственная шерсть</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Флок</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Велюр</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Искусственный мех</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Шенилл</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Велюровая замша</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Микровельвет</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Шенилл буклированный</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Жаккард</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Микровелюр</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Искусственная замша</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Рогожка</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Искусственная кожа</p>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="icon">
+                            <img src="./images/check-icon.svg" alt="">
+                        </span>
+                        <p>Рогожка буклированная</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-modal__content-item">
+                  <h4>Цвет:</h4>
+                  <div class="main-modal__content-item__list">
+                      <div class="color">
+                          <img src="./images/color-1.svg" alt="">
+                          <p>Белый</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-2.svg" alt="">
+                          <p>Бордо</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-3.svg" alt="">
+                          <p>Синий</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-4.svg" alt="">
+                          <p>Светло-желтый</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-5.svg" alt="">
+                          <p>Коричневый</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-6.svg" alt="">
+                          <p>Фиолетовый</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-7.svg" alt="">
+                          <p>Желтый</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-8.svg" alt="">
+                          <p>Зеленый</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-9.svg" alt="">
+                          <p>Серый</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-10.svg" alt="">
+                          <p>Оранжевый</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-11.svg" alt="">
+                          <p>Розовый</p>
+                      </div>
+                      <div class="color">
+                          <img src="./images/color-12.svg" alt="">
+                          <p>Черный</p>
+                      </div>
+                  </div>
+                </div>
+                <div class="main-modal__content-item">
+                  <h4>Направления:</h4>
+                  <div class="main-modal__content-item__list">
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span class="icon">
+                          <img src="./images/check-icon.svg" alt="">
+                      </span>
+                      <p>Принт</p>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span class="icon">
+                          <img src="./images/check-icon.svg" alt="">
+                      </span>
+                      <p>Chaleur a la maison</p>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span class="icon">
+                          <img src="./images/check-icon.svg" alt="">
+                      </span>
+                      <p>Водостойкость</p>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span class="icon">
+                          <img src="./images/check-icon.svg" alt="">
+                      </span>
+                      <p>Crypton</p>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span class="icon">
+                          <img src="./images/check-icon.svg" alt="">
+                      </span>
+                      <p>Легкая чистка</p>
+                    </div>
+                    <div class="form-checkbox">
+                      <input type="checkbox" name="" id="">
+                      <span class="icon">
+                          <img src="./images/check-icon.svg" alt="">
+                      </span>
+                      <p>Eco</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-modal__bottom">
+                    <button class="btn-lightblue">Применить</button>
+                    <a href="#" class="clear-btn">Сбросить</a>
+                </div>
+            </div>
+        </section>
+        <!-- Filter modal end -->
+
             <!-- catalog -->
             <section class="catalog">
               <div class="container">
@@ -322,7 +578,7 @@
                   <div class="catalog_head">
                     <div class="catalog_head_in">
                       <div class="catalog_head_left">
-                        <button class="catalog_filter_btn">
+                        <button class="catalog_filter_btn filter-modal__open">
                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21.25 11.9999H8.895M4.534 11.9999H2.75M4.534 11.9999C4.534 11.4217 4.76368 10.8672 5.17251 10.4584C5.58134 10.0496 6.13583 9.81989 6.714 9.81989C7.29217 9.81989 7.84666 10.0496 8.25549 10.4584C8.66432 10.8672 8.894 11.4217 8.894 11.9999C8.894 12.5781 8.66432 13.1326 8.25549 13.5414C7.84666 13.9502 7.29217 14.1799 6.714 14.1799C6.13583 14.1799 5.58134 13.9502 5.17251 13.5414C4.76368 13.1326 4.534 12.5781 4.534 11.9999ZM21.25 18.6069H15.502M15.502 18.6069C15.502 19.1852 15.2718 19.7403 14.8628 20.1492C14.4539 20.5582 13.8993 20.7879 13.321 20.7879C12.7428 20.7879 12.1883 20.5572 11.7795 20.1484C11.3707 19.7396 11.141 19.1851 11.141 18.6069M15.502 18.6069C15.502 18.0286 15.2718 17.4745 14.8628 17.0655C14.4539 16.6566 13.8993 16.4269 13.321 16.4269C12.7428 16.4269 12.1883 16.6566 11.7795 17.0654C11.3707 17.4742 11.141 18.0287 11.141 18.6069M11.141 18.6069H2.75M21.25 5.39289H18.145M13.784 5.39289H2.75M13.784 5.39289C13.784 4.81472 14.0137 4.26023 14.4225 3.8514C14.8313 3.44257 15.3858 3.21289 15.964 3.21289C16.2503 3.21289 16.5338 3.26928 16.7983 3.37883C17.0627 3.48839 17.3031 3.64897 17.5055 3.8514C17.7079 4.05383 17.8685 4.29415 17.9781 4.55864C18.0876 4.82313 18.144 5.10661 18.144 5.39289C18.144 5.67917 18.0876 5.96265 17.9781 6.22714C17.8685 6.49163 17.7079 6.73195 17.5055 6.93438C17.3031 7.13681 17.0627 7.29739 16.7983 7.40695C16.5338 7.5165 16.2503 7.57289 15.964 7.57289C15.3858 7.57289 14.8313 7.34321 14.4225 6.93438C14.0137 6.52555 13.784 5.97106 13.784 5.39289Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round"/>
                           </svg>
