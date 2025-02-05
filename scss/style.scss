@@ -1323,6 +1323,12 @@ textarea {
             left: 0;
             width: 100%;
 
+            &:hover {
+                h5 {
+                    color: #01ABD3;
+                }
+            }
+
             @include media(992) {
                 top: 145px;
             }
@@ -1365,15 +1371,7 @@ textarea {
             position: relative;
             z-index: 1;
 
-            .hover-text {
-                display: none;
-            }
-
             &:hover {
-                .main-img, h4, p, h3 {
-                    opacity: 0;
-                }
-
                 .hover-text {
                     display: block;
                 }

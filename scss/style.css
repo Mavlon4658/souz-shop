@@ -1308,6 +1308,9 @@ textarea {
   left: 0;
   width: 100%;
 }
+.example__card .hover-text:hover h5 {
+  color: #01ABD3;
+}
 @media screen and (max-width: 992px) {
   .example__card .hover-text {
     top: 145px;
@@ -1348,12 +1351,6 @@ textarea {
 .example__card li {
   position: relative;
   z-index: 1;
-}
-.example__card li .hover-text {
-  display: none;
-}
-.example__card li:hover .main-img, .example__card li:hover h4, .example__card li:hover p, .example__card li:hover h3 {
-  opacity: 0;
 }
 .example__card li:hover .hover-text {
   display: block;
