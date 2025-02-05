@@ -2172,6 +2172,7 @@ textarea {
         .mail {
 
             svg {
+                transition: .2s ease;
                 @include media(993) {
                     width: 24px;
                     height: 24px;
@@ -2180,6 +2181,7 @@ textarea {
 
             &:hover {
                 svg {
+                    opacity: 50%;
                     path {
                         fill: #465464;
                     }

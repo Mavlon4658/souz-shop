@@ -2088,11 +2088,17 @@ textarea {
 .footer_social .telegram:hover svg path {
   fill: #0088CC;
 }
+.footer_social .mail svg {
+  transition: 0.2s ease;
+}
 @media screen and (max-width: 993px) {
   .footer_social .mail svg {
     width: 24px;
     height: 24px;
   }
+}
+.footer_social .mail:hover svg {
+  opacity: 50%;
 }
 .footer_social .mail:hover svg path {
   fill: #465464;
