@@ -8048,3 +8048,340 @@ textarea {
     }
 }
 // order-history
+
+
+// index-two
+
+.cleansing_home {
+    &_in {
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 30px 30px 46px 30px;
+        background-image: url('../images/chistika_home.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include media(993) {
+            padding: 20px 10px 16px 10px;
+        }
+
+        @include media(650) {
+            background-image: url('../images/chistika_home_mobile.png');
+        }
+    }
+
+    h1 {
+        font-family: $font-tt-norms;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 100%;
+        color: #fff;
+        max-width: 740px;
+
+        @include media(933) {
+            font-size: 30px;
+        }
+    }
+
+    p {
+        max-width: 700px;
+        font-family: $font-tt-norms;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        color: #fff;
+        margin-top: 24px;
+
+        @include media(993) {
+            font-size: 12px;
+            margin-top: 15px;
+            max-width: 265px;
+        }
+    }
+
+    &_bottom {
+        margin-top: 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+
+        @include media(993) {
+            margin-top: 192px;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: start;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-shrink: 0;
+
+        @include media(993) {
+            flex-direction: column;
+            gap: 10px;
+            align-items: start;
+        }
+
+        a {
+            font-family: $font-tt-norms;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background: #C2E6F3;
+            border: 2px solid transparent;
+
+            &.active {
+                background: #fff;
+                border: 2px solid #01ABD3;
+            }
+
+            @include media(993) {
+                font-size: 16px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.cleansing_services {
+    padding: 107px 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+
+    @include media(993) {
+        padding: 60px 0;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+    }
+
+    &_block {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include media(993) {
+            gap: 15px;
+            width: 100%;
+        }
+
+        &:hover {
+            .hover {
+                display: block;
+            }
+
+            .default {
+                display: none;
+            }
+        }
+    }
+
+    img {
+        flex-shrink: 0;
+        transition: .2s ease;
+
+        @include media(993) {
+            height: 49px;
+            width: 49px;
+            object-fit: contain;
+        }
+    }
+
+    .end_img {
+        width: 77px;
+        height: 74px;
+        flex-shrink: 0;
+
+        @include media(993) {
+            width: 46px;
+            height: 49px;
+        }
+    }
+
+    .hover {
+        display: none;
+    }
+
+    span {
+        font-family: $font-tt-norms;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #000;
+        margin-bottom: 10px;
+
+        @include media(993) {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        br {
+            @include media(993) {
+                display: none;
+            }
+        }
+    }
+
+    p {
+        font-family: $font-tt-norms;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        color: #6B7683;
+        margin: 0;
+
+        @include media(993) {
+            font-size: 12px;
+        }
+    }
+}
+
+.composition {
+    padding: 90px 0;
+
+    @include media(993) {
+        padding: 60px 0;
+    }
+
+    h3 {
+        font-family: $font-tt-norms;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        color: #6B7683;
+
+        @include media(993) {
+            font-size: 16px;
+        }
+    }
+
+    &_in {
+        border-radius: 5px;
+        padding: 40px;
+        border: 2px solid #6B768333;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include media(993) {
+            padding: 21px 7px 16px 7px;
+            gap: 15px;
+        }
+    }
+
+    &_head {
+        padding: 10px 20px;
+        background: #F4F4F4;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+
+        @include media(993) {
+            padding: 5px 10px;
+            border-radius: 100px;
+            gap: 32px;
+        }
+
+        span {
+            font-family: $font-tt-norms;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            color: #000;
+
+            @include media(993) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &_content {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 16px;
+
+        @include media(993) {
+            gap: 32px;
+        }
+
+        &_left,
+        &_right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        span, p {
+            font-family: $font-tt-norms;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: #000;
+
+            @include media(993) {
+                font-size: 12px;
+                line-height: 120%;
+            }
+        }
+
+        span {
+            padding: 10px 0 10px 20px;
+
+            @include media(993) {
+                padding: 0 0 0 10px;
+            }
+        }
+
+        p {
+            padding: 10px 20px 10px 0;
+
+            @include media(993) {
+                padding: 0 10px 0 0;
+            }
+        }
+    }
+
+    &_bottom {
+        .line {
+            height: 2px;
+            width: 100%;
+            background: #6B768333;
+            margin-bottom: 20px;
+        }
+
+        span {
+            padding: 10px 20px;
+            font-family: $font-tt-norms;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: #6B7683;
+            max-width: 521px;
+
+            @include media(993) {
+                padding: 0 10px;
+                font-size: 12px;
+                line-height: 120%;
+            }
+
+            @include media(993) {
+                max-width: 264px;
+            }
+        }
+    }
+}
+// index-two
