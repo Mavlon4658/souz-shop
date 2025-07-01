@@ -7586,6 +7586,44 @@ textarea {
   border: none;
 }
 
+.chistetika_logo {
+  width: 219px;
+}
+@media screen and (max-width: 993px) {
+  .chistetika_logo {
+    width: 120px;
+  }
+}
+.chistetika_logo img {
+  width: 100%;
+}
+
+.header__left {
+  gap: 42px;
+}
+
+.header__bottom_two {
+  display: none;
+}
+@media screen and (max-width: 1171px) {
+  .header__bottom_two {
+    display: block;
+  }
+}
+
+.cleansing_home {
+  margin-top: 130px;
+}
+@media screen and (max-width: 1171px) {
+  .cleansing_home {
+    margin-top: 200px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .cleansing_home {
+    margin-top: 120px;
+  }
+}
 .cleansing_home_in {
   border-radius: 10px;
   overflow: hidden;
@@ -7908,4 +7946,261 @@ textarea {
   .composition_bottom span {
     max-width: 264px;
   }
+}
+
+.cleansing_about {
+  padding: 60px 0;
+  background: #EBEEEF;
+}
+@media screen and (max-width: 993px) {
+  .cleansing_about {
+    padding: 40px 0;
+  }
+}
+.cleansing_about_in {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+@media screen and (max-width: 768px) {
+  .cleansing_about_in {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+}
+.cleansing_about_video {
+  position: relative;
+}
+.cleansing_about_video img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cleansing_about_video button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 993px) {
+  .cleansing_about_video button img {
+    width: 74px;
+  }
+}
+.cleansing_about_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid rgba(107, 118, 131, 0.2);
+  border-radius: 5px;
+  padding: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .cleansing_about_text {
+    padding: 0;
+    border: none;
+    gap: 15px;
+  }
+}
+.cleansing_about_text h3 {
+  font-family: "TT Norms", sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 100%;
+  color: #6B7683;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 993px) {
+  .cleansing_about_text h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+}
+.cleansing_about_text h3 span {
+  border-radius: 10px;
+  border: 2px solid #01ABD3;
+}
+.cleansing_about_text h3 sup {
+  position: absolute;
+  right: -50px;
+  top: -10px;
+  font-family: "TT Norms", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 100%;
+  color: #01ABD3;
+}
+.cleansing_about_text p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000;
+}
+@media screen and (max-width: 993px) {
+  .cleansing_about_text p {
+    font-size: 12px;
+  }
+}
+
+.chistetika_cards {
+  padding: 60px 0;
+}
+@media screen and (max-width: 993px) {
+  .chistetika_cards {
+    padding: 40px 0;
+  }
+}
+.chistetika_cards .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+@media screen and (max-width: 993px) {
+  .chistetika_cards .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+.chistetika_cards .chistetika_card {
+  position: relative;
+  height: 398px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .chistetika_cards .chistetika_card {
+    height: 220px;
+  }
+}
+.chistetika_cards .chistetika_card img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.chistetika_cards .chistetika_card_text {
+  position: relative;
+  z-index: 2;
+  padding: 20px 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+@media screen and (max-width: 768px) {
+  .chistetika_cards .chistetika_card_text {
+    padding: 10px;
+  }
+}
+.chistetika_cards .chistetika_card_text span {
+  display: block;
+  font-family: "TT Norms", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .chistetika_cards .chistetika_card_text span {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+}
+.chistetika_cards .chistetika_card_text p {
+  font-family: "TT Norms", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #000;
+}
+@media screen and (max-width: 768px) {
+  .chistetika_cards .chistetika_card_text p {
+    font-size: 8px;
+  }
+}
+
+.product_cards .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.product_cards img {
+  width: 103px;
+  height: 103px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+@media screen and (max-width: 768px) {
+  .product_cards img {
+    width: 52px;
+    height: 52px;
+  }
+}
+.product_cards span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: #6B7683;
+  display: block;
+  text-align: center;
+}
+@media screen and (max-width: 993px) {
+  .product_cards span {
+    font-size: 12px;
+  }
+}
+.product_cards .product_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 993px) {
+  .product_cards .product_card {
+    gap: 10px;
+  }
+}
+.product_cards .product_card_img {
+  position: relative;
+}
+.product_cards .product_card_img::before {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50px;
+  height: 2px;
+  background: rgba(1, 171, 211, 0.5019607843);
+  width: 340px;
+}
+@media screen and (max-width: 993px) {
+  .product_cards .product_card_img::before {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product_cards .product_card_img::before {
+    top: 26px;
+    width: 190px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .product_cards .product_card_img::before {
+    width: 130px;
+  }
+}
+.product_cards .product_card .end_img::before {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
