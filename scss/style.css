@@ -7878,18 +7878,13 @@ textarea {
 }
 .composition_content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 16px;
 }
 @media screen and (max-width: 993px) {
   .composition_content {
     gap: 32px;
   }
-}
-.composition_content_left, .composition_content_right {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 .composition_content span, .composition_content p {
   font-family: "TT Norms", sans-serif;
@@ -7945,6 +7940,16 @@ textarea {
 @media screen and (max-width: 993px) {
   .composition_bottom span {
     max-width: 264px;
+  }
+}
+.composition_content_block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media screen and (max-width: 993px) {
+  .composition_content_block {
+    gap: 16px 32px;
   }
 }
 
@@ -8203,4 +8208,275 @@ textarea {
 }
 .product_cards .product_card .end_img::before {
   display: none;
+}
+
+.product_title h3 {
+  font-family: "TT Norms", sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 100%;
+  color: #6B7683;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 993px) {
+  .product_title h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+.product_title h3 sup {
+  position: absolute;
+  right: -50px;
+  top: -10px;
+  font-family: "TT Norms", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 100%;
+  color: #01ABD3;
+}
+@media screen and (max-width: 768px) {
+  .product_title h3 sup {
+    font-size: 12px;
+    right: -20px;
+    top: -5px;
+  }
+}
+.product_title ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  margin-bottom: 56px;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 630px) {
+  .product_title ul {
+    overflow-x: scroll;
+    margin-bottom: 40px;
+  }
+}
+.product_title ul::-webkit-scrollbar {
+  display: none;
+}
+.product_title ul a {
+  font-family: "TT Norms", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #C2E6F3;
+  border: 2px solid transparent;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.product_title ul a.active {
+  background: #fff;
+  border: 2px solid #01ABD3;
+}
+@media screen and (max-width: 993px) {
+  .product_title ul a {
+    font-size: 16px;
+    border-radius: 10px;
+  }
+}
+.product .product_slider {
+  max-width: 650px;
+}
+@media screen and (max-width: 1230px) {
+  .product .product_slider {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .product .product_slider {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.product .productSwiper {
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 1230px) {
+  .product .productSwiper {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.product .productSwiper .prodcut_btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product .productSwiper .product-button-prev {
+  left: 23px;
+}
+@media screen and (max-width: 768px) {
+  .product .productSwiper .product-button-prev {
+    left: 10px;
+  }
+}
+.product .productSwiper .product-button-next {
+  right: 23px;
+}
+@media screen and (max-width: 768px) {
+  .product .productSwiper .product-button-next {
+    right: 10px;
+  }
+}
+.product .productSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product_in {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .product_in {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.product_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 40px;
+}
+@media screen and (max-width: 1200px) {
+  .product_text {
+    padding: 0;
+  }
+}
+.product_text h3 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  color: #6B7683;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 993px) {
+  .product_text h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+.product_text p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 993px) {
+  .product_text p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+}
+.product_text span {
+  display: block;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #656565;
+}
+@media screen and (max-width: 993px) {
+  .product_text span {
+    font-size: 8px;
+    margin-bottom: 15px;
+  }
+}
+.product_text ul {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media screen and (max-width: 993px) {
+  .product_text ul {
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+}
+.product_text ul li {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #656565;
+}
+@media screen and (max-width: 993px) {
+  .product_text ul li {
+    font-size: 12px;
+  }
+}
+.product_text_bottom span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000;
+  display: block;
+  margin-bottom: 14px;
+}
+@media screen and (max-width: 993px) {
+  .product_text_bottom span {
+    font-size: 16px;
+    color: #6B7683;
+  }
+}
+.product_text_bottom .links {
+  display: flex;
+  gap: 8px;
+}
+@media screen and (max-width: 768px) {
+  .product_text_bottom .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+  }
+}
+.product_text_bottom .links a {
+  width: 170px;
+  height: 59px;
+  border-radius: 10px;
+  background: #C2E6F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000;
+}
+@media screen and (max-width: 993px) {
+  .product_text_bottom .links a {
+    height: 40px;
+    font-size: 12px;
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
