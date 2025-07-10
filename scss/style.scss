@@ -8172,6 +8172,7 @@ textarea {
             border-radius: 10px;
             background: #C2E6F3;
             border: 2px solid transparent;
+            position: relative;
 
             &.active {
                 background: #fff;
@@ -8181,6 +8182,38 @@ textarea {
             @include media(993) {
                 font-size: 16px;
                 border-radius: 10px;
+            }
+
+            &:hover {
+                span {
+                    display: block;
+                }
+            }
+
+            span {
+                display: none;
+                border-radius: 5px;
+                width: 142px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                bottom: -33px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 110.00000000000001%;
+                text-align: center;
+                color: #fff;
+                background: #6B7683;
+                padding: 3px 15px 6px 15px;
+
+                svg {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: -5px;
+                }
             }
         }
     }
@@ -8209,6 +8242,51 @@ textarea {
             width: 100%;
         }
 
+        .custom-icon {
+            display: inline-block;
+            cursor: pointer;
+
+            .icon path {
+                stroke: #6B7683;
+                fill: none;
+                transition: all 0.3s ease;
+            }
+        }
+
+        .custom-hover-icon {
+            display: inline-block;
+            cursor: pointer;
+
+            .icon path {
+                stroke: #6B7683;
+                fill: none;
+                transition: all 0.3s ease;
+            }
+        }
+
+        .custom-hover-icon2 {
+            display: inline-block;
+            cursor: pointer;
+
+            .icon {
+                path,
+                line,
+                circle {
+                    stroke: #6b7683;
+                    fill: none;
+                    transition: all 0.3s ease;
+                }
+
+                .main-body {
+                    fill: none;
+                }
+
+                .dot {
+                    fill: none;
+                }
+            }
+        }
+
         &:hover {
             .hover {
                 display: block;
@@ -8217,6 +8295,45 @@ textarea {
             .default {
                 display: none;
             }
+
+            .custom-icon  {
+                .icon {
+                    path {
+                        stroke: black;
+                        fill: #FEE43F;
+                    }
+                }
+            }
+
+            .custom-hover-icon {
+                .icon {
+                    path {
+                        stroke: black;
+                        fill: #AAC4A6;
+                    }
+                }
+            }
+
+            .custom-hover-icon2 {
+                .icon {
+                    .circle-outline,
+                    .line-cross,
+                    .small-line,
+                    .dot,
+                    .main-body {
+                        stroke: black;
+                    }
+
+                    .main-body {
+                        fill: #c6c6c6;
+                    }
+
+                    .dot {
+                        fill: #c6c6c6;
+                    }
+                }
+            }
+
         }
     }
 
@@ -8753,6 +8870,7 @@ textarea {
                 flex-wrap: nowrap;
                 flex-shrink: 0;
                 white-space: nowrap;
+                position: relative;
 
                 &.active {
                     background: #fff;
@@ -8762,6 +8880,38 @@ textarea {
                 @include media(993) {
                     font-size: 16px;
                     border-radius: 10px;
+                }
+
+                &:hover {
+                    span {
+                        display: block;
+                    }
+                }
+
+                span {
+                    display: none;
+                    border-radius: 5px;
+                    width: 142px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    bottom: -33px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 110.00000000000001%;
+                    text-align: center;
+                    color: #fff;
+                    background: #6B7683;
+                    padding: 3px 15px 6px 15px;
+
+                    svg {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        top: -5px;
+                    }
                 }
             }
         }
@@ -8821,6 +8971,13 @@ textarea {
         }
 
         .swiper-slide {
+            height: auto;
+
+            .swiper_img {
+                width: 100%;
+                height: 100%;
+            }
+
             img {
                 width: 100%;
                 height: 100%;

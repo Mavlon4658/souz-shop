@@ -7712,6 +7712,7 @@ textarea {
   border-radius: 10px;
   background: #C2E6F3;
   border: 2px solid transparent;
+  position: relative;
 }
 .cleansing_home ul a.active {
   background: #fff;
@@ -7722,6 +7723,33 @@ textarea {
     font-size: 16px;
     border-radius: 10px;
   }
+}
+.cleansing_home ul a:hover span {
+  display: block;
+}
+.cleansing_home ul a span {
+  display: none;
+  border-radius: 5px;
+  width: 142px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -33px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 110%;
+  text-align: center;
+  color: #fff;
+  background: #6B7683;
+  padding: 3px 15px 6px 15px;
+}
+.cleansing_home ul a span svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -5px;
 }
 
 .cleansing_services {
@@ -7749,11 +7777,67 @@ textarea {
     width: 100%;
   }
 }
+.cleansing_services_block .custom-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+.cleansing_services_block .custom-icon .icon path {
+  stroke: #6B7683;
+  fill: none;
+  transition: all 0.3s ease;
+}
+.cleansing_services_block .custom-hover-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+.cleansing_services_block .custom-hover-icon .icon path {
+  stroke: #6B7683;
+  fill: none;
+  transition: all 0.3s ease;
+}
+.cleansing_services_block .custom-hover-icon2 {
+  display: inline-block;
+  cursor: pointer;
+}
+.cleansing_services_block .custom-hover-icon2 .icon path,
+.cleansing_services_block .custom-hover-icon2 .icon line,
+.cleansing_services_block .custom-hover-icon2 .icon circle {
+  stroke: #6b7683;
+  fill: none;
+  transition: all 0.3s ease;
+}
+.cleansing_services_block .custom-hover-icon2 .icon .main-body {
+  fill: none;
+}
+.cleansing_services_block .custom-hover-icon2 .icon .dot {
+  fill: none;
+}
 .cleansing_services_block:hover .hover {
   display: block;
 }
 .cleansing_services_block:hover .default {
   display: none;
+}
+.cleansing_services_block:hover .custom-icon .icon path {
+  stroke: black;
+  fill: #FEE43F;
+}
+.cleansing_services_block:hover .custom-hover-icon .icon path {
+  stroke: black;
+  fill: #AAC4A6;
+}
+.cleansing_services_block:hover .custom-hover-icon2 .icon .circle-outline,
+.cleansing_services_block:hover .custom-hover-icon2 .icon .line-cross,
+.cleansing_services_block:hover .custom-hover-icon2 .icon .small-line,
+.cleansing_services_block:hover .custom-hover-icon2 .icon .dot,
+.cleansing_services_block:hover .custom-hover-icon2 .icon .main-body {
+  stroke: black;
+}
+.cleansing_services_block:hover .custom-hover-icon2 .icon .main-body {
+  fill: #c6c6c6;
+}
+.cleansing_services_block:hover .custom-hover-icon2 .icon .dot {
+  fill: #c6c6c6;
 }
 .cleansing_services img {
   flex-shrink: 0;
@@ -8274,6 +8358,7 @@ textarea {
   flex-wrap: nowrap;
   flex-shrink: 0;
   white-space: nowrap;
+  position: relative;
 }
 .product_title ul a.active {
   background: #fff;
@@ -8284,6 +8369,33 @@ textarea {
     font-size: 16px;
     border-radius: 10px;
   }
+}
+.product_title ul a:hover span {
+  display: block;
+}
+.product_title ul a span {
+  display: none;
+  border-radius: 5px;
+  width: 142px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -33px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 110%;
+  text-align: center;
+  color: #fff;
+  background: #6B7683;
+  padding: 3px 15px 6px 15px;
+}
+.product_title ul a span svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -5px;
 }
 .product .product_slider {
   max-width: 650px;
@@ -8338,6 +8450,13 @@ textarea {
   .product .productSwiper .product-button-next {
     right: 10px;
   }
+}
+.product .productSwiper .swiper-slide {
+  height: auto;
+}
+.product .productSwiper .swiper-slide .swiper_img {
+  width: 100%;
+  height: 100%;
 }
 .product .productSwiper .swiper-slide img {
   width: 100%;
